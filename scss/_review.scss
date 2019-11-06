@@ -1,0 +1,73 @@
+#contents ol.bookThum li dl.reviewRate {
+    display: none;
+    font-size: 85%;
+    line-height: 1.2;
+    padding-top: 8px;
+    *zoom: 1;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    >dt,
+    >dd {
+        float: left;
+    }
+    .rateStatus {
+        width: 69px;
+        height: 13px;
+        overflow: hidden;
+        margin-right: 5px;
+        background: url(https://testbook.hikaritv.net/shopping/image/share/img_rate01.png) no-repeat !important;
+    }
+    >dt {
+        .rateStatus0 {
+            background-position: 0 0;
+        }
+        .rateStatus0half {
+            background-position: 0 -13px;
+        }
+        .rateStatus1 {
+            background-position: 0 -26px;
+        }
+        .rateStatus1half {
+            background-position: 0 -39px;
+        }
+        .rateStatus2 {
+            background-position: 0 -52px;
+        }
+        .rateStatus2half {
+            background-position: 0 -65px;
+        }
+        .rateStatus3 {
+            background-position: 0 -78px;
+        }
+        .rateStatus3half {
+            background-position: 0 -91px;
+        }
+        .rateStatus4 {
+            background-position: 0 -104px;
+        }
+        .rateStatus4half {
+            background-position: 0 -117px;
+        }
+        .rateStatus5 {
+            background-position: 0 -130px;
+        }
+    }
+    >dd.rateNum {
+        padding-right: 3px;
+        .rateTotal {
+            color: #666666;
+            padding-right: 10px;
+        }
+        .reviewNum {
+            padding-left: 18px;
+            background: url(https://testbook.hikaritv.net/shopping/image/share/icon_review01.png) no-repeat left center;
+        }
+        .reviewDisable {
+            /* UPDATE:2012/10/19 */
+            color: #666666;
+        }
+    }
+}

@@ -1,0 +1,30 @@
+@mixin listOrderSelectBox($float:left, $height:24px, $fontWeight:bold, $marginR:0, $fontsize:inherit) {
+    float: $float;
+    height: $height;
+    line-height: $height;
+    margin-right: $marginR;
+    >label {
+        font-size: $fontsize;
+        font-weight: $fontWeight;
+        >select {
+            font-size: $fontsize;
+            padding: 2px 0 4px 0;
+            option {
+               &[selected]{
+                background: #ececec;
+               } 
+               &:hover{
+                background: #ececec;
+               }
+               
+            }
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        select:-moz-focusring {
+            color: transparent;
+            text-shadow: 0 0 0 #828c9a;
+        }
+    }
+}

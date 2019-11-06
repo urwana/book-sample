@@ -1,0 +1,37 @@
+.js_radioCookie {
+    >span {
+        cursor: pointer;
+    }
+}
+
+.js_confModal_bookshelf {
+    display: none;
+}
+
+.js_modalCart_bookshelf,
+.js_modalLink_bookshelf {
+    display: none;
+}
+
+.js_modalLinkOpen,
+.js_modalCartOpen,
+.js_openBookViewer {
+    cursor: pointer;
+}
+
+.js_filtedItemBox {
+    display: none;
+}
+
+.js_rankController_sp_listDetail,
+.js_rankController_sp_listLarge {
+    display: none;
+}
+
+.js_filter_open_book {
+    display: block;
+}
+
+.js_filter_close_book {
+    display: none;
+}

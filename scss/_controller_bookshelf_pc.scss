@@ -1,0 +1,74 @@
+@import "./parts/_mixin_button";
+@import "./parts/_mixin_listOrderSelectBox";
+@import "./parts/_mixin_listOrderBox_bookshelf";
+@import "./parts/_mixin_numToDisplay";
+@import "./parts/_mixin_pager_bookshelf";
+@import "./parts/_mixin_styleBtnBox";
+@import "./parts/_mixin_rankNav";
+@import "./parts/_mixin_ttlText";
+@import "./parts/_mixin_searchBox_pc";
+@import "./parts/_mixin_older_switch_book.scss";
+//PC TOP BOOKSHELF
+.listNav .ttlSet {
+    margin-bottom: 0;
+    .srchTtl {
+        margin-bottom: 15px;
+    }
+}
+
+.listNav_inner0 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .txt_itemCount_book {
+        @include txt_itemCount(right, 20px);
+        margin-bottom: 20px;
+    }
+}
+
+.listNav_inner1 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    margin-bottom: 20px;
+    .searchBox_book {
+        //($float:left, $marginR:0, $fontSize:14px, $width:400px, $height:40, $labelWidth:60) {
+        @include searchBox(56%, left, 0, 18px, 470px, 40, 60);
+        margin-bottom: 12px;
+    }
+    .numToDisplay_book {
+        //($marginR, $padding, $fontSize, $fontWeight,$linheight)
+        @include numToDisplay(30px, 0, 14px, normal, 40px);
+    }
+    .styleBtnBox_book {
+        //$float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $lineHeight:24px
+        @include styleBtnBox(right, 0, 14px, bold, 24px, 40px);
+    }
+    .btnBox_conf_book {
+        //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $lineHeight:24px) 
+        @include confBtnBox(right, 0, 14px, bold, 24px, 40px);
+    }
+}
+
+.listNav_inner2 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .listInfo {
+        //($pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%) 
+        @include pager_bookshelf(#666666, left, 18px, 8px, 80%, 30px);
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .orderSelect_book {
+        //($float:right, $width:340px, $height:40px, $marginR:20px, $itemright:20px, $radius:2px, $fontSize:18px) 
+        @include olderSwitchBook(left, 30%, 340px, 40px, 0, 5%, 4px, 18px, 1.5px);
+        width: 100%;
+    }
+}

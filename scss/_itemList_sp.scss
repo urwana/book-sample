@@ -1,0 +1,598 @@
+@charset "utf-8";
+#mainColumn .listBookArticle {
+    margin-bottom: 12px;
+}
+
+.reviewRate {
+    display: none;
+}
+
+.bookThum>li {
+    .bookThumData {
+        .rank {
+            font-size: 13px;
+            >img {
+                display: inline-block;
+                margin-right: 4px;
+                width: 14px;
+            }
+        }
+    }
+    &:nth-of-type(1) .rank {
+        color: #d0b030;
+    }
+    &:nth-of-type(2) .rank {
+        color: #bcb8a9;
+    }
+    &:nth-of-type(3) .rank {
+        color: #936618;
+    }
+}
+
+.display_listDetail_book {
+    .bookThum {
+        >li {
+            width: 98%;
+            margin: auto;
+            position: relative;
+            padding: 10px 0;
+            background: url(https://testbook.hikaritv.net/shopping/image/share/img_dot.gif) repeat-x left bottom;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+                *zoom: 1;
+                height: 0;
+            }
+            .bookThumPhoto {
+                display: block;
+                float: left;
+                width: 33.3%;
+                max-height: 137px;
+                max-width: 137px;
+                margin-bottom: 5px;
+                >a>img {
+                    width: 100%;
+                }
+                >a:hover img {
+                    opacity: 0.8;
+                    filter: alpha(opacity=80);
+                    .bookThumCopy {
+                        display: block;
+                        width: 100%;
+                        color: #d65f00;
+                        font-weight: bold;
+                        word-break: break-all;
+                        margin: 15px 0 10px 0;
+                        padding: 9px;
+                        border: 1px solid #e28134;
+                        -webkit-border-radius: 2px;
+                        -moz-border-radius: 2px;
+                        border-radius: 2px;
+                    }
+                }
+            }
+            .bookThumData {
+                display: block;
+                float: left;
+                width: 66.7%;
+                margin-bottom: 5px;
+                .rank {
+                    display: block;
+                    font-size: 11px;
+                    margin-bottom: 5px;
+                    >span {
+                        padding-left: 4px;
+                    }
+                }
+                a.name,
+                .name {
+                    display: inline-block;
+                    word-wrap: break-word;
+                    margin-bottom: 5px;
+                    color: #333333;
+                    text-decoration: none;
+                    font-size: 17px;
+                    &:hover {
+                        color: #23527c;
+                    }
+                }
+                .authorSet {
+                    display: block;
+                    color: #333333;
+                    font-size: 12px;
+                    word-wrap: break-word;
+                    padding-bottom: 0;
+                    >a {
+                        color: #333333;
+                        text-decoration: none;
+                        line-height: 1.5;
+                        display: block;
+                        margin-bottom: 4px;
+                        &:hover {
+                            color: #23527c;
+                        }
+                    }
+                    .genre {
+                        display: block;
+                        font-size: 12px;
+                        word-wrap: break-word;
+                        padding-bottom: 0;
+                        color: #333333;
+                        line-height: 1.5;
+                        display: inline-block;
+                        margin-bottom: 4px;
+                        >a {
+                            color: #333333;
+                            &:hover {
+                                color: #23527c;
+                            }
+                        }
+                        >span {
+                            color: #333333;
+                        }
+                    }
+                }
+                .linkToSeries {
+                    display: block;
+                    margin-bottom: 5px;
+                    background: url(/test/pre_bookrenewal/img/arrow_linkto_pc_book.png) left center no-repeat;
+                    background-size: 12px;
+                    padding-left: 18px;
+                    >a {
+                        font-size: 12px;
+                        line-height: 1.5;
+                        color: #333333;
+                        &:hover {
+                            color: #23527c;
+                        }
+                    }
+                }
+                .bookThumComment {
+                    display: none;
+                }
+                .releaseDate {
+                    display: block;
+                    word-wrap: break-word;
+                    text-align: center;
+                    background-color: transparent;
+                    border: 0;
+                    border-top: 1px solid #4bca2e;
+                    border-bottom: 1px solid #4bca2e;
+                    color: #4bca2e;
+                    font-size: 10px;
+                    margin: 0 0 5px 0;
+                    padding: 1px 0;
+                    letter-spacing: normal !important;
+                    max-width: 100px;
+                }
+            }
+        }
+        .priceGroup_book {
+            margin-bottom: 5px;
+            >.table_priceAndPoint {
+                font-size: 12px;
+                >tbody {
+                    >tr {
+                        >th {
+                            padding: 4px 0;
+                            font-weight: normal;
+                            text-align: left;
+                        }
+                        >td {
+                            padding-left: 10px;
+                            margin-bottom: 8px;
+                            font-weight: bold;
+                            &:nth-of-type(1) {
+                                display: none;
+                            }
+                        }
+                        .price {
+                            font-size: 14px;
+                            font-weight: bold;
+                        }
+                        .pointUp {
+                            font-size: 13px;
+                            font-weight: bold;
+                        }
+                        .longTitle {
+                            font-size: 11px;
+                        }
+                        .breakThrough {
+                            font-size: 12px;
+                            text-decoration: line-through;
+                        }
+                        .term {
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+                        .highLight {
+                            color: red;
+                        }
+                        .unit {
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bookThumTool {
+        display: block;
+        float: left;
+        width: 91.3%;
+        margin: 0 4.329% 0 4.329%;
+        .nav {
+            position: relative;
+            >li {
+                text-align: center;
+                padding: 0 0 5px 0;
+                background: #ffffff;
+                display: none;
+                >a {
+                    display: inline-block;
+                }
+                &.bookCartListBtn .addMsg,
+                &.bookCartListBtnNew .addMsg,
+                &.bookReserveListBtn .addMsg,
+                &.bookReserveListBtnNew .addMsg,
+                &.bookWishListBtn .addMsg,
+                &.bookWishListBtnNew .addMsg {
+                    //($bottom:30px,$left:0,$fontSize:14px,$fontWeight:bold,$padding:6px 9px 6px 6px,$borderW,$arrowP1,$arrowP2)
+                    @include L_addCartFavMsg(4px, 107%, 10px, bold, 6px 9px 6px 6px, 8px, 4px, -16px);
+                    display: none;
+                }
+            }
+            .bookCartListBtn {
+                @include bookCartBtn(50%, 95%, 30px, 0, 2px, 11px);
+                display: inline-block;
+            }
+            .bookCartListBtnNew {
+                @include bookCartBtn(50%, 95%, 30px, 0, 2px, 10px);
+                display: inline-block;
+            }
+            .bookReserveListBtn {
+                @include bookReserveBtn(50%, 95%, 30px, 0, 2px, 11px);
+                display: inline-block;
+            }
+            .bookReserveListBtnNew {
+                @include bookReserveBtn(50%, 95%, 30px, 0, 2px, 10px);
+                display: inline-block;
+            }
+            .bookWishListBtn {
+                position: relative;
+                @include bookWishBtn(50%, 95%, 30px, 0, 2px, 11px);
+                display: inline-block;
+            }
+            .bookWishListBtnNew {
+                position: relative;
+                @include bookWishBtn(50%, 95%, 30px, 0, 2px, 10px);
+                display: inline-block;
+            }
+            .bookReadTrialBtn {
+                @include bookReadTrialBtn(50%, 95%, 30px, 0, 2px, 11px);
+                display: inline-block;
+            }
+            .bookReadTrialBtnBrowser {
+                @include bookReadTrialBtn(50%, 95%, 30px, 0, 2px, 10px);
+                display: inline-block;
+            }
+            .bookReadTrialBtnBrowserNew {
+                @include bookReadTrialBtn(50%, 95%, 30px, 0, 2px, 9px);
+                display: inline-block;
+            }
+            .sample {
+                color: #a75b16;
+                font-weight: bold;
+                font-size: 93%;
+                padding-bottom: 5px;
+                padding-left: 5px;
+                text-align: left;
+            }
+            .addFav a {
+                display: block;
+                width: 140px;
+                height: 26px;
+                text-indent: 100%;
+                white-space: nowrap;
+                overflow: hidden;
+                margin: 0 auto;
+                background: url(https://testbook.hikaritv.net/shopping/image/book/btn_list_fav.gif) no-repeat left top;
+            }
+        }
+    }
+    .sendSchedule {
+        display: block;
+        font-size: 93%;
+        margin-top: 8px;
+    }
+}
+
+.ranking_book {
+    .bookThum {
+        >li {
+            padding-top: 20px;
+        }
+    }
+}
+
+.display_listLarge_book {
+    .bookThum {
+        padding-top: 10px;
+        font-size: 0;
+        >li {
+            margin-top: 25px;
+            padding: 10px 0 15px 0;
+            background: none;
+            *zoom: 1;
+            display: inline-block;
+            position: relative;
+            width: 75%;
+            margin: auto;
+            margin-bottom: 20px;
+            @media screen and (min-width: 414px) {
+                width: 137px;
+            }
+            @media screen and (min-width: 375px) and (max-width: 413px) {
+                width: 125px;
+            }
+            @media screen and (max-width: 374px) {
+                width: 105px;
+            }
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .bookThumPhoto {
+                display: block;
+                float: none;
+                margin-bottom: 5px;
+                >a {
+                    >img {
+                        width: 100%;
+                        &:hover img {
+                            opacity: 0.8;
+                            filter: alpha(opacity=80);
+                            .bookThumCopy {
+                                display: block;
+                                width: 100%;
+                                color: #d65f00;
+                                font-weight: bold;
+                                word-break: break-all;
+                                margin: 15px 0 10px 0;
+                                padding: 9px;
+                                border: 1px solid #e28134;
+                                -webkit-border-radius: 2px;
+                                -moz-border-radius: 2px;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bookThumData {
+                display: block;
+                float: none;
+                background: none;
+                width: 70%;
+                margin: auto;
+                .rank {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                }
+                a.name,
+                .name {
+                    display: inline-block;
+                    word-wrap: break-word;
+                    margin-bottom: 5px;
+                    color: #333333;
+                    text-decoration: none;
+                    min-height: 18px;
+                    max-height: 18px;
+                    font-size: 11px;
+                    text-align: left;
+                    overflow: hidden;
+                    &:hover {
+                        color: #23527c //!important;
+                    }
+                    >span {
+                        font-size: 12px;
+                    }
+                    height: 24px;
+                    overflow: hidden;
+                }
+                .authorSet {
+                    display: block;
+                    color: #333333;
+                    font-size: 12px;
+                    word-wrap: break-word;
+                    padding-bottom: 0;
+                    margin-bottom: 5px;
+                    >a {
+                        color: #333333;
+                        text-decoration: none;
+                        line-height: 1.5;
+                        display: inline-block;
+                        margin-bottom: 4px;
+                        &:hover {
+                            color: #23527c;
+                        }
+                        &:nth-of-type(2) {
+                            display: none;
+                        }
+                        height: 16px;
+                        overflow: hidden;
+                    }
+                    .genre {
+                        display: none;
+                    }
+                }
+                .linkToSeries {
+                    display: none;
+                }
+                .bookThumComment {
+                    display: none;
+                }
+                .releaseDate {
+                    display: block;
+                    text-align: center;
+                    background-color: transparent;
+                    border: 0;
+                    border-top: 1px solid #4bca2e;
+                    border-bottom: 1px solid #4bca2e;
+                    color: #4bca2e;
+                    font-size: 11px;
+                    margin: 0 0 5px 0;
+                    padding: 3px 0;
+                    letter-spacing: normal !important;
+                    max-width: 100px;
+                    position: absolute;
+                    bottom: -12px;
+                    font-weight: bold;
+                    margin: auto;
+                    width: 80%;
+                    left: 10%;
+                }
+            }
+        }
+        .btn.point {
+            text-align: center;
+            margin: auto;
+            width: 80%;
+            left: 10%;
+            font-size: 11px;
+            padding: 2px 0;
+        }
+        .priceGroup {
+            display: none;
+        }
+        .sendSchedule {
+            display: block;
+            font-size: 93%;
+            margin-top: 8px;
+        }
+        .bookThumTool {
+            display: block;
+            margin-top: 8px;
+            height: 30px;
+            .nav {
+                .bookCartListBtn {
+                    @include bookCartBtn(100%, 80%, 25px, 0, 2px, 11px);
+                }
+                .bookCartListBtnNew {
+                    @include bookCartBtn(100%, 80%, 25px, 0, 2px, 10px);
+                }
+                .bookReserveListBtn {
+                    @include bookReserveBtn(100%, 80%, 25px, 0, 2px, 11px);
+                }
+                .bookReserveListBtnNew {
+                    @include bookReserveBtn(100%, 80%, 25px, 0, 2px, 10px);
+                }
+                .bookWishListBtn {
+                    display: none; //position: relative;
+                    //@include bookWishBtn(100%, 95%, 25px, 0, 2px, 11px);
+                }
+                .bookWishListBtnNew {
+                    display: none; //position: relative;
+                    //@include bookWishBtn(100%, 95%, 25px, 0, 2px, 10px);
+                }
+                .bookReadTrialBtn {
+                    @include bookReadTrialBtn(100%, 80%, 25px, 0, 2px, 11px);
+                }
+                .bookReadTrialBtnBrowser {
+                    display: none; //@include bookReadTrialBtn(100%, 95%, 25px, 0, 2px, 10px);
+                }
+                .bookReadTrialBtnBrowserNew {
+                    display: none; //@include bookReadTrialBtn(100%, 95%, 25px, 0, 2px, 9px);
+                }
+                .sample {
+                    color: #a75b16;
+                    font-weight: bold;
+                    font-size: 93%;
+                    padding-bottom: 5px;
+                    padding-left: 5px;
+                    text-align: left;
+                }
+                .addFav a {
+                    display: block;
+                    width: 140px;
+                    height: 26px;
+                    text-indent: 100%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    background: url(https://testbook.hikaritv.net/shopping/image/book/btn_list_fav.gif) no-repeat left top;
+                }
+                >li {
+                    display: none;
+                    &:nth-of-type(1) {
+                        display: block;
+                    }
+                    /*
+                    >a {
+                        margin-left: 10%;
+                    }
+                    */
+                    &.bookCartListBtn .addMsg,
+                    &.bookCartListBtnNew .addMsg,
+                    &.bookReserveListBtn .addMsg,
+                    &.bookReserveListBtnNew .addMsg/*,
+                    &.bookWishListBtn .addMsg,
+                    &.bookWishListBtnNew .addMsg*/
+                        {
+                        //($bottom:30px,$left:0,$fontSize:14px,$fontWeight:bold,$padding:6px 9px 6px 6px,$borderW,$arrowP1,$arrowP2)
+                        @include L_addCartFavMsg(4px, 107%, 10px, bold, 6px 9px 6px 6px, 8px, 4px, -16px);
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ranking_book {
+    .display_listLarge_book {
+        .bookThum {
+            >li {
+                padding-top: 25px;
+                .btn.point {
+                    bottom: 20px;
+                }
+                .releaseDate {
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.search_book {
+    .display_listLarge_book {
+        .bookThum {
+            >li {
+                .btn.point {
+                    bottom: 20px;
+                }
+                .releaseDate {
+                    bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+.bookListArea .bookListAreaInr .nav-horizontal .mask>ul {
+    display: block;
+    li a {
+        color: #333333;
+        text-decoration: none;
+        &:hover {
+            color: #23527c;
+        }
+    }
+}

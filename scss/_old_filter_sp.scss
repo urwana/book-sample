@@ -1,0 +1,97 @@
+.nav_filterBox_book {
+    width: 100%;
+    a {
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+    }
+    .nav_filter_book {
+        >ul {
+            >li {
+                >dl {
+                    display: block;
+                    line-height: 1.2;
+                    padding: 1%;
+                    font-size: 13px;
+                    color: #ffffff;
+                    cursor: pointer;
+                    >dt {
+                        background: #8eb4e3;
+                        padding: 4px 0;
+                        &:after {
+                            content: '';
+                            display: block;
+                            clear: both;
+                        }
+                        >a>span {
+                            display: block;
+                            float: left;
+                            &:nth-of-type(1) {
+                                margin-left: 8px;
+                            }
+                            &:nth-of-type(2) {
+                                margin-left: 16px;
+                            }
+                            &:last-child {
+                                float: right;
+                                margin-right: 8px;
+                                width: 12px;
+                                height: 12px;
+                                border: solid 1px #8eb4e3;
+                                background: #ffffff;
+                            }
+                        }
+                    }
+                    .sub_genre_book {
+                        margin-left: 13px;
+                        >.navGenre {
+                            background: #ffffff;
+                            >ul {
+                                >li {
+                                    margin: 4px 0 4px 13px;
+                                    border-bottom: solid #e6e6e6 1px;
+                                    &:first-child {
+                                        margin-left: 0;
+                                        > a > span:nth-of-type(2) {
+                                            margin-left: 22px;
+                                        }
+                                    }
+                                    >a {
+                                        &:after {
+                                            content: '';
+                                            display: block;
+                                            clear: both;
+                                        }
+                                        >span {
+                                            float: left;
+                                            &:nth-of-type(1) {
+                                                margin-left: 8px;
+                                                overflow: hidden;
+                                                width: 60%;
+                                                display: block;
+                                               // color:#ffffff;
+                                            }
+                                            &:nth-of-type(2) {
+                                                margin-left: 16px;
+                                            }
+                                            &:last-child {
+                                                float: right;
+                                                margin-right: 8px;
+                                                width: 12px;
+                                                height: 12px;
+                                                border: solid 1px #8eb4e3;
+                                                background: #ffffff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

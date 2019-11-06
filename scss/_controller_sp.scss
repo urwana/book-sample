@@ -1,0 +1,188 @@
+@import "./parts/_mixin_button";
+@import "./parts/_mixin_listOrderSelectBox";
+@import "./parts/_mixin_listOrderBox";
+@import "./parts/_mixin_numToDisplay";
+@import "./parts/_mixin_pager";
+@import "./parts/_mixin_styleBtnBox";
+@import "./parts/_mixin_rankNav";
+@import "./parts/_mixin_ttlText";
+@import "./parts/_mixin_filterButton_wrap";
+//SP DETAIL1
+.sp_controller_detail1 {
+    margin-bottom: 12px;
+    >.listNav {
+        font-size: 93%;
+        margin: 0 1%;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        .listNav_inner1 {
+            margin-bottom: 8px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .ttl_detailController_book {
+                @include ttl_detailController(14px, bold);
+            }
+            .orderSelect_book {
+                @include listOrderBox(right, 0, 12px);
+            }
+        }
+        .listNav_inner2 {
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .bookAllBuyBtn {
+                //($float:right, $listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:4px, $fontSize:14px) 
+                @include bookAllBuyBtn(left, 52%, 100%, 42px, 0, 2px, 12px);
+            }
+            .styleBtnBox_book {
+                //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+                @include styleBtnBox(right, 5px, 11px, normal, 20px, 25px);
+            }
+        }
+    }
+}
+
+//SP DETAIL2
+.sp_controller_detail2 {
+    margin-bottom: 10px;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .listInfo {
+        //($pageColor:#37c823,$float:none,$fontSize:93%,$marginB:5px)
+        @include pager(#666666, none, 93%, 14px, 80%, 30px);
+        width: 100%;
+        max-width: 568px;
+    }
+    .bookAllBuyBtn {
+        //($float:right, $listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:4px, $fontSize:14px) 
+        @include bookAllBuyBtn(none, 100%, 97%, 42px, 0, 2px, 12px);
+        .pc_none {
+            display: none !important;
+        }
+    }
+}
+
+//SP SEARCH1
+.sp_controller_search1 {
+    position: relative;
+    margin-bottom: 15px;
+    >.listNav {
+        font-size: 93%;
+        margin: 0 1%;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        .listNav_inner1 {
+            margin-bottom: 15px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .txt_itemCount_book {
+                @include txt_itemCount(left);
+            }
+            .styleBtnBox_book {
+                //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+                @include styleBtnBox(right, 5px, 11px, normal, 20px, 25px);
+            }
+        }
+        .listNav_inner2 {
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .filterButton_wrap_book {
+                @include filterButton_wrap(left);
+            }
+            .listOrderBox_book {
+                @include listOrderSelectBox(right, 24px, normal, 0, 12px);
+            }
+        }
+    }
+}
+
+//SP SEARCH2
+.sp_controller_search2 {
+    >.listNav {
+        margin-bottom: 24px;
+        .listInfo {
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            } //$pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%, $height:30px) 
+            @include pager(#666666, left, 14px, 0, 100%, 30px);
+        }
+    }
+}
+
+//SP RANK1
+.sp_controller_rank1 {
+    >.listNav {
+        font-size: 93%;
+        margin: 0 1%;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .ranking_controllerWrap_main {
+            // ($parentWidth:98%,$width:75px, $height:50px, $mRight:3px, $fontSize:12px, $float:left, $scroll:scroll, $padding:1%, $align:middle) 
+            @include ranking_controllerWrap_main(680px, 60px, 35px, 2px, 11px, none, scroll, 4px, top);
+            margin-bottom: 15px;
+        }
+        .listOrderBox_year {
+            //($float:left, $height:24px, $fontWeight:bold, $marginR:0) 
+            @include listOrderSelectBox(left, 24px, normal, 12px, 12px);
+        }
+        .styleBtnBox_book {
+            //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+            @include styleBtnBox(right, 5px, 11px, normal, 20px, 25px);
+        }
+    }
+}
+
+//SP RANK2
+.sp_controller_rank2 {
+    >.listNav {
+        font-size: 93%;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .ranking_controllerWrap_main {
+            // ($parentWidth:98%,$width:75px, $height:50px, $mRight:3px, $fontSize:12px, $float:left, $scroll:scroll, $padding:1%, $align:middle) 
+            @include ranking_controllerWrap_main(670px, 60px, 35px, 1px, 11px, none, scroll, 4px, top);
+            margin-bottom: 15px;
+        }
+        .ranking_controllerWrap_sub {
+            //($parentWidth:200px, $width:90px, $height:28px, $mRight:3px, $fontSize:12px, $float:left,$padding:1%, $align:middle) 
+            @include ranking_controllerWrap_sub(134px, 60px, 25px, 3px, 10px, none, 1%, middle, 3px);
+            width: 50%;
+            float: left;
+            margin-left: 5px;
+        }
+        .styleBtnBox_book {
+            //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+            @include styleBtnBox(right, 5px, 11px, normal, 20px, 25px);
+        }
+    }
+}

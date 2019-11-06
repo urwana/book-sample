@@ -1,0 +1,76 @@
+#page .detailList_book {
+    >.bookListAreaInr {
+        border-top: 2px solid #a4a4a4;
+        .tit {
+            font-size: 16px;
+            font-weight: bold;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin-left: 0;
+            margin-bottom: 14px;
+        }
+        .tit_detail {
+            font-size: 16px;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-weight: normal !important;
+            margin-bottom: 14px;
+        }
+        .ico-book {
+            background: url(/test/pre_bookrenewal/img/common/icon_book_grey.png) left center no-repeat;
+            background-size: 20px 15px;
+            padding-left: 25px;
+            margin-left: 8px;
+        }
+    }
+    .ranking {
+        .nav-horizontal {
+            position: relative !important;
+            .tab {
+                position: absolute;
+                top: -20px;
+                right: 45px;
+                padding: 0 7px;
+                //border-bottom: 2px solid #abff99;
+            }
+            .linkAll {
+                position: absolute;
+                right: 3px;
+                top: -12px;
+                color: #3e9fe4;
+                font-size: 13px;
+            }
+            >button {
+                display: none;
+            }
+            .mask {
+                overflow-x: scroll;
+                >ul {
+                    width: 500%;
+                }
+            }
+        }
+    }
+}
+
+.bookListArea .bookListAreaInr .nav-horizontal .mask ul li {
+    .bookauthor {
+        padding: 4px 0;
+        text-align: left;
+        max-height: 24px;
+        overflow: hidden;
+        font-size: 11px;
+    }
+}
+
+/*temp*/
+
+.bookListArea .bookListAreaInr .nav-horizontal .mask ul li .status,
+.bookListArea .bookListAreaInr .nav-horizontal .no-mask ul li .status {
+    margin-bottom: 8px;
+}
+
+button.prev,
+button.next {
+    display: none;
+}

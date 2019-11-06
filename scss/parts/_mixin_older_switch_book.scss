@@ -1,0 +1,31 @@
+@mixin olderSwitchBook($float:none, $width:30%, $maxWidth:340px, $height:40px, $marginR:20px, $itemright:5%, $radius:2px, $fontSize:18px, $border:2px) {
+    float: $float;
+    margin-right: $marginR;
+    >span {
+        display: inline-block;
+        width: $width;
+        height: $height;
+        line-height: $height;
+        margin-right: $itemright;
+        cursor: pointer;
+        >span {
+            display: block;
+            width: 100%;
+            max-width: $maxWidth;
+            margin: auto;
+            border-radius: $radius;
+            font-size: $fontSize;
+            border: #999999 solid $border;
+            color: #333333;
+            padding-left: 20px;
+        }
+        &.checked>span {
+            color: #ffffff;
+            background: #999999;
+            cursor: default;
+        }
+    }
+    span:last-child {
+        margin-right: 0;
+    }
+}

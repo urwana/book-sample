@@ -1,0 +1,40 @@
+@mixin filterButton_wrap($float:left, $fontsize:12px, $marginL:1%) {
+    float: $float;
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+    margin-left: $marginL;
+    >p {
+        float: left;
+        display: block;
+        height: 20px;
+        line-height: 20px;
+        font-size: $fontsize;
+    }
+    .filterButton_book {
+        display: block;
+        float: left;
+        position: relative;
+        width: 40px;
+        height: 24px;
+        margin-right: 8px;
+        >span {
+            width: 40px;
+            height: 24px;    
+            border: #999999 solid 1px;
+            text-align: center;
+            line-height: 24px;
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+            font-weight: bold;
+            color: #a4a4a4;
+        }
+    }
+}

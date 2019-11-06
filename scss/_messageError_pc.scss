@@ -1,0 +1,19 @@
+.messageArea {
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 auto 20px auto;
+    padding: 15px;
+    width:50%;
+    margin-left: 200px;
+}
+
+.messageError {
+    border: 1px solid #e23030;
+    border-radius: 2px;
+    >ul {
+        >li {
+            color: #e23030;
+            background: #ffffff;
+        }
+    }
+}

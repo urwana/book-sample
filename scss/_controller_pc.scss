@@ -1,0 +1,204 @@
+@import "./parts/_mixin_button";
+@import "./parts/_mixin_listOrderSelectBox";
+@import "./parts/_mixin_listOrderBox";
+@import "./parts/_mixin_numToDisplay";
+@import "./parts/_mixin_pager";
+@import "./parts/_mixin_styleBtnBox";
+@import "./parts/_mixin_rankNav";
+@import "./parts/_mixin_ttlText";
+//PC DETAIL1
+.pc_controller_detail1 {
+    margin-bottom: 30px;
+    >.listNav {
+        font-size: 93%;
+        margin: 0;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        .listNav_inner1 {
+            margin-bottom: 20px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .ttl_detailController_book {
+                @include ttl_detailController(36px, 28px);
+            }
+            .styleBtnBox_book {
+                //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+                @include styleBtnBox(right, 0, 14px, bold, 26px, 26px);
+            }
+            .orderSelect_book {
+                //($float:right,$marginR:0,$fontSize:14px)
+                @include listOrderBox(right, 30px, 14px, 28px);
+            }
+        }
+        .listNav_inner2 {
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .listInfo {
+                //$pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%, $height:30px) 
+                @include pager(#666666, left, 18px, 0, 60%, 30px); //max-width: 600px;
+            }
+            .bookAllBuyBtn {
+                // ($float:right, $listWidth:130px, $aWidth:130px, $height:40px, $padding:4px, $radius:3px, $fontSize:18px) 
+                @include bookAllBuyBtn(right, 260px, 260px, 45px, 0, 3px, 18px);
+            }
+        }
+    }
+}
+
+//PC DETAIL2
+.pc_controller_detail2 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    margin-bottom: 30px;
+    >.listNav {
+        font-size: 93%;
+        margin: 0;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        .listInfo {
+            //$pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%, $height:30px) 
+            @include pager(#666666, left, 18px, 0, 60%, 30px);
+        }
+        .bookAllBuyBtn {
+            // ($float:right, $listWidth:130px, $aWidth:130px, $height:40px, $padding:4px, $radius:3px, $fontSize:18px) 
+            @include bookAllBuyBtn(right, 260px, 260px, 45px, 0, 3px, 18px);
+        }
+    }
+}
+
+//PC SEARCH1
+.pc_controller_search1 {
+    >.listNav {
+        font-size: 93%;
+        margin: 0;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        .listNav_inner1 {
+            margin-bottom: 15px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .txt_itemCount_book {
+                @include txt_itemCount(right, 20px);
+            }
+        }
+        .listNav_inner2 {
+            margin-bottom: 30px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .listOrderBox_book {
+                //($float:left, $height:24px, $fontWeight:bold, $marginR:0, $fontsize:inherit) 
+                @include listOrderSelectBox($float:left, $height:26px, $fontWeight:normal, $marginR:0, $fontsize:14px);
+            }
+            .numToDisplay_book {
+                //($marginR, $padding, $fontSize, $fontWeight,$linheight)
+                @include numToDisplay(30px, 0, 14px, normal, 26px);
+            }
+            .styleBtnBox_book {
+                //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+                @include styleBtnBox(right, 0, 14px, bold, 26px, 26px);
+            }
+        }
+    }
+}
+
+//PC SEARCH2
+.pc_controller_search2 {
+    margin-bottom: 20px;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .listInfo {
+        //$pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%, $height:30px) 
+        @include pager(#666666, left, 18px, 0, 100%, 30px);
+    }
+}
+
+//PC RANK1
+.pc_controller_rank1 {
+    margin-top: 30px;
+    >.listNav {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        margin-bottom: 8px;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .listNav_inner1 {
+            margin-bottom: 20px;
+            .ranking_controllerWrap_main {
+                // ($width:75px, $height:50px, $mRight:3px, $fontSize:12px, $float:left, $scroll:scroll, $padding:1%, $align:middle)
+                @include ranking_controllerWrap_main(100%, 8.84%, 50px, 2px, 12px, none, none, 12px, middle);
+            }
+        }
+        .listNav_inner2 {
+            .listOrderBox_year {
+                //($float:left, $height:24px, $fontWeight:bold, $marginR:0)
+                @include listOrderSelectBox();
+            }
+            .styleBtnBox_book {
+                //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+                @include styleBtnBox(right, 0, 14px, bold, 26px, 26px);
+            }
+        }
+    }
+}
+
+//PC RANK2
+.pc_controller_rank2 {
+    margin-top: 30px;
+    >.listNav {
+        font-size: 14px;
+        margin: 0;
+        padding: 0;
+        *zoom: 1;
+        position: relative;
+        margin-bottom: 8px;
+        &:after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .listNav_inner1 {
+            margin-bottom: 20px;
+            .ranking_controllerWrap_main {
+                // ($width:75px, $height:50px, $mRight:3px, $fontSize:12px, $float:left, $scroll:scroll, $padding:1%, $align:middle)
+                @include ranking_controllerWrap_main(100%, 8.84%, 50px, 2px, 12px, none, none, 12px, middle);
+            }
+        }
+        .listNav_inner2 {
+            .ranking_controllerWrap_sub {
+                //($parentWidth:200px, $width:90px, $height:28px, $mRight:3px, $fontSize:12px, $float:left,$padding:1%, $align:middle) 
+                @include ranking_controllerWrap_sub(200px, 90px, 26px, 5px, 18px, left, 0, middle);
+            }
+            .styleBtnBox_book {
+                //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+                @include styleBtnBox(right, 0, 14px, bold, 26px, 26px);
+            }
+        }
+    }
+}

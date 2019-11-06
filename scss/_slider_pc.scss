@@ -1,0 +1,45 @@
+#mainArea main {
+    .bookListArea {
+        >.bookListAreaInr {
+            border-top: 2px solid #a4a4a4;
+            .tit {
+                font-size: 24px;
+                font-weight: bold;
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-left: 0;
+                margin-bottom: 14px;
+            }
+            .tit_detail {
+                font-size: 24px;
+                padding-top: 0;
+                padding-bottom: 0;
+                margin-left: 0;
+                font-weight: normal !important;
+                margin-bottom: 14px;
+            }
+            >h2 {
+                .icon-book {
+                    &:before {
+                        color: #a4a4a4;
+                    }
+                }
+            }
+            .tab {
+                position: absolute;
+                top: 10px;
+                right: 60px;
+                padding: 0 7px;
+                //border-bottom: 2px solid #abff99;
+            }
+            .linkAll,
+            .caution {
+                position: absolute;
+                right: 3px;
+                top: 18px;
+                color: #3e9fe4;
+                font-size: 14px;
+            }
+        }
+    }
+}

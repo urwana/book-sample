@@ -1,0 +1,90 @@
+    @mixin searchBox($parentWidth:100%,$float:left, $marginR:0, $fontSize:14px, $width:400px, $height:40, $labelWidth:60) {
+        position: relative;
+        width: $parentWidth;
+        float: $float;
+        margin: auto;
+        .searchWord_bookshelf {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none; //border: rgba(171, 255, 153, 0.5) solid 1px;
+            border: #e6e6e6 solid 1px;
+            border-radius: 0 0 2px 2px;
+            width: $width;
+            display: block;
+            margin: auto;
+            color: rgba(8, 37, 1, 1);
+            line-height: $height+px;
+            height: $height+px;
+        }
+        ::placeholder {
+            color: rgba(8, 37, 1, 0.6);
+            padding-left: 8px;
+            font-size: $fontSize;
+        }
+        .js_filtedItem_close {
+            position: absolute;
+            top: $height/2 +4 +px;
+            right: $labelWidth +30 +px;
+            display: block;
+            text-align: center;
+            width: 16px;
+            height: 16px;
+            line-height: 16px;
+            background: #a4a4a4;
+            border-radius: 50%;
+            color: #ffffff;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        >label {
+            display: block;
+            cursor: pointer;
+            width: $labelWidth+px;
+            height: $height+px;
+            position: absolute;
+            right: (100 - $width)/2;
+            top: $height/2+1+px;
+            font-size: $fontSize;
+            color: #ffffff;
+            background: #3e9fe4;
+            text-align: center;
+            line-height: $height+'px';
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+        .filterBox_bookshelf {
+            position: absolute;
+            top: 45px;
+            width: 620px;
+            height: 400px;
+            overflow-y: scroll;
+            z-index: 999;
+            .filter_bookshelf {
+                background: none;
+                padding: 20px;
+                @include clearfix;
+                >li {
+                    width: 120px;
+                    float: left;
+                    margin: 0 20px 20px 0;
+                    background: #ffffff;
+                    >a {
+                        >img {
+                            width: 100%;
+                        }
+                    }
+                    .ttl_filter_bookshelf {
+                        margin-top: 10px;
+                        font-size: 10px;
+                        font-weight: bold;
+                        height: 20px;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }

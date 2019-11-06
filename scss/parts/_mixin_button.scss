@@ -1,0 +1,250 @@
+%btnBase {
+    background: #ffffff !important;
+    position: relative;
+    a {
+        display: table;
+        margin: auto;
+        overflow: hidden;
+        white-space: normal !important;
+        text-indent: 0 !important;
+        line-height: 1.1;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        margin: auto;
+        padding: 0;
+        >span {
+            padding-left: 0;
+            display: table-cell;
+            vertical-align: middle;
+        }
+        &:hover {
+            opacity: 0.5;
+        }
+        &.selected {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}
+
+@mixin bookCartBtn($listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:3px, $fontSize:14px) {
+    @extend %btnBase;
+    width: $listWidth;
+    a {
+        width: $aWidth;
+        height: $height;
+        border-radius: $radius;
+        font-size: $fontSize;
+        font-weight: bold;
+        background: #f39c12;
+        color: #ffffff;
+        border-bottom: #c47700 solid 5px;
+    }
+}
+
+@mixin bookReserveBtn($listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:3px, $fontSize:14px) {
+    @extend %btnBase;
+    width: $listWidth;
+    a {
+        width: $aWidth;
+        height: $height;
+        border-radius: $radius;
+        font-size: $fontSize;
+        font-weight: bold;
+        background:#3dcdf1;
+        color: #ffffff;
+        border-bottom: #1799ba solid 5px;
+    }
+}
+
+@mixin bookWishBtn($listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:3px, $fontSize:14px) {
+    @extend %btnBase;
+    width: $listWidth;
+    a {
+        width: $aWidth;
+        height: $height;
+        border-radius: $radius;
+        font-size: $fontSize;
+        font-weight: bold;
+        background: #ececec !important;
+        color: #333333;
+        border-bottom: #bbbbbb solid 5px;
+    }
+}
+
+@mixin bookReadTrialBtn ($listWidth:130px, $aWidth:130px, $height:40px, $padding:4px, $radius:3px, $fontSize:18px) {
+    @extend %btnBase;
+    width: $listWidth;
+    a {
+        width: $aWidth;
+        height: $height;
+        border-radius: $radius;
+        font-size: $fontSize;
+        font-weight: bold;
+        background: #fbf2d7;
+        color: #333333;
+        border: #bfbfbf solid 1px;
+    }
+}
+
+@mixin bookAllBuyBtn ($float:right, $listWidth:130px, $aWidth:130px, $height:40px, $padding:4px, $radius:3px, $fontSize:18px) {
+    float: $float;
+    position: relative;
+    @extend %btnBase;
+    width: $listWidth;
+    a {
+        width: $aWidth;
+        height: $height;
+        border-radius: $radius;
+        font-size: $fontSize;
+        font-weight: bold;
+        background: #f39c12;
+        color: #ffffff;
+        border-bottom: #c47700 solid 5px;
+        >span {
+            font-size: $fontSize;
+        }
+    }
+}
+
+%btnDefaultSetting {
+    display: table !important;
+    margin: auto;
+    overflow: hidden;
+    white-space: normal !important;
+    text-indent: 0 !important;
+    line-height: 1.1;
+    cursor: pointer;
+}
+
+//($width, $height, $radius, $padding, $arrowsL, $device,$fontSize)
+@mixin filterResetButton($width, $height, $radius, $padding, $arrowsL, $device, $fontSize) {
+    @extend %btnDefaultSetting;
+    width: $width;
+    height: $height !important;
+    border-radius: $radius;
+    padding: $padding 0;
+    font-size: $fontSize;
+    border: solid 1px #999999;
+    vertical-align: middle;
+    padding-left: $arrowsL;
+    background: #999999;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    //background: url(/test/pre_bookrenewal/img/arrow_reset_#{$device}_book.png) 8px center no-repeat;
+    //background-size: $fontSize;
+    &:hover {
+        opacity: 0.5;
+    }
+    >span {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 1.5;
+    }
+}
+
+@mixin filterMoreButton($width, $height, $radius, $padding, $arrowsL, $device, $fontSize) {
+    @extend %btnDefaultSetting;
+    width: $width;
+    height: $height !important;
+    border-radius: $radius;
+    padding: $padding 0;
+    font-size: $fontSize;
+    border: solid 1px #999999;
+    vertical-align: middle;
+    padding-left: $arrowsL;
+    background: #ffffff;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    //background: url(/test/pre_bookrenewal/img/arrow_filter_#{$device}_book.png) 8px center no-repeat;
+    //background-size: $fontSize;
+    &:hover {
+        opacity: 0.5;
+    }
+    >span {
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 1.5;
+    }
+}
+
+%msgBase {
+    position: absolute;
+    display: block;
+    border: #00a2e5 solid 1px;
+    white-space: nowrap;
+    background: #00a2e5;
+    color: #ffffff;
+    display: inline-block;
+    line-height: 1.2;
+    &:nth-of-type(1) {
+        visibility: hidden;
+    }
+}
+
+@mixin L_addCartFavMsg($top:23%, $right:106%, $fontSize:14px, $fontWeight:bold, $padding:6px 9px 6px 6px, $borderW:10px, $arrowP1:40px, $arrowP2:20px) {
+    @extend %msgBase;
+    top: $top;
+    right: $right;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    padding: $padding;
+    &:after {
+        content: '';
+        position: absolute;
+        top: $arrowP1;
+        right: $arrowP2;
+        width: 0;
+        height: 0;
+        border-right: $borderW solid transparent;
+        border-top: $borderW solid transparent;
+        border-left: $borderW solid #00a2e5;
+        border-bottom: $borderW solid transparent;
+    }
+}
+
+@mixin T_addCartFavMsg($top:30px, $left:0, $fontSize:14px, $fontWeight:bold, $padding:6px 9px 6px 6px, $borderW:10px, $arrowP1:40px, $arrowP2:20px) {
+    @extend %msgBase;
+    top: $top;
+    left: $left;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    padding: $padding;
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: $arrowP1;
+        right: $arrowP2;
+        width: 0;
+        height: 0;
+        border-right: $borderW solid transparent;
+        border-top: $borderW solid #00a2e5;
+        border-left: $borderW solid transparent;
+        border-bottom: $borderW solid transparent;
+    }
+}
+
+@mixin B_addCartFavMsg($top:23%, $left:0, $fontSize:14px, $fontWeight:bold, $padding:6px 9px 6px 6px, $borderW:10px, $arrowP1:40px, $arrowP2:20px) {
+    @extend %msgBase;
+    top: $top;
+    left: $left;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    padding: $padding;
+    &:after {
+        content: '';
+        position: absolute;
+        top: $arrowP1;
+        right: $arrowP2;
+        width: 0;
+        height: 0;
+        border-right: $borderW solid transparent;
+        border-top: $borderW solid transparent;
+        border-left: $borderW solid transparent;
+        border-bottom: $borderW solid #00a2e5;
+    }
+}

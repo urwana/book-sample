@@ -1,0 +1,22 @@
+@mixin ttl_detailController ($paddingL:24px, $fontsize:14px, $fontW:normal) {
+    float: left;
+    color: #333333;
+    font-size: $fontsize;
+    height: $fontsize;
+    line-height: $fontsize;
+    font-weight: $fontW;
+    padding-left: $paddingL;
+    .icon-book {
+        position: relative;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: $fontsize;
+    }
+}
+
+@mixin txt_itemCount($float:right, $fontSize:14px) {
+    font-size: $fontSize;
+    float: $float;
+    line-height: 24px;
+}

@@ -1,0 +1,64 @@
+
+#page .sectionReBook .groupBookCover .bookDevice {
+    display: block;
+    font-size: 11px;
+    margin: 0;
+    >div {
+        margin: 4px 4px 8px 4px;
+        border: solid 1px #00a2e5;
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -o-border-radius: 3px;
+        -ms-border-radius: 3px;
+        text-align: center;
+        letter-spacing: -0.5em;
+        .ttl_device_book {
+            //padding: 3px 5px;
+            margin: 8px 0;
+            font-weight: bold;
+            color: #00a2e5;
+            font-size: 11px;
+            text-align: center !important;
+            letter-spacing: normal;
+        }
+        >span {
+            display: inline-block;
+            width: 45px;
+            height: 45px;
+            margin: 4px;
+        }
+        .TV {
+            background: url(/test/pre_bookrenewal/img/icon_device_tv.svg) center center no-repeat;
+            background-size: auto;
+        }
+        .Windows {
+            background: url(/test/pre_bookrenewal/img/icon_device_win.svg) center center no-repeat;
+            background-size: auto;
+        }
+        .iOS {
+            background: url(/test/pre_bookrenewal/img/icon_device_ios.svg) center center no-repeat;
+            background-size: auto;
+        }
+        .Android {
+            background: url(/test/pre_bookrenewal/img/icon_device_an.svg) center center no-repeat;
+            background-size: auto;
+        }
+    }
+    .exp_deviceDetail_book {
+        text-align: left;
+        >a {
+            display: inline-block;
+            padding-left: 0 !important;
+            background: none !important; // background: url("/shopping/image/share/arw_subcategory.gif") no-repeat left center;
+            text-align: left;
+            line-height: 1.3;
+            font-size: 10px;
+            font-weight: bold;
+            &:link {
+                color: #333333;
+                text-decoration: underline;
+            }
+        }
+    }
+}

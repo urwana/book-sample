@@ -1,0 +1,9 @@
+@mixin bookLinkStyle {
+    color:#3e9fe4;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: #3e9fe4 solid 1px;
+    &:hover{
+        opacity: 0.5;
+    }
+}

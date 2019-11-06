@@ -1,0 +1,170 @@
+$red_color:#e60012;
+$htvbook_color:#4bca2e;
+$fontSize:18px;
+.status.vertical {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    line-height: 1;
+    float: left;
+    font-weight: bold;
+    width: 21px;
+    height: 200px;
+    overflow: hidden;
+    >span {
+        border-radius: 5px;
+        margin-bottom: 5px;
+        padding: 4px 0;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+        white-space: nowrap;
+        width: 21px;
+        line-height: 20px;
+        text-orientation: upright;
+        font-size: 13px;
+        display: none;
+        background: #ffffff;
+        >span {
+            border-radius: 0;
+            margin-bottom: 0;
+            padding: 0;
+            white-space: normal;
+            width: auto;
+            line-height: normal;
+            text-orientation: sideways;
+            -webkit-writing-mode: unset;
+            -ms-writing-mode: unset;
+            writing-mode: unset;
+            display: contents;
+            font-size: 13px;
+            -webkit-text-combine: horizontal;
+            -ms-text-combine-horizontal: all;
+            text-combine-upright: all;
+        }
+        &:nth-of-type(1) {
+            display: inline-block;
+        }
+        &.cat-discount {
+            border: 2px solid $red_color;
+            background: $red_color;
+            color: #FFF;
+        }
+        &.cat-series {
+            border: 1px solid $red_color;
+            background: $red_color;
+            color: #FFF;
+        }
+        &.cat-free {
+            border: 1px solid $red_color;
+            color: $red_color;
+        }
+        &.cat-end {
+            border: 1px solid $htvbook_color;
+            color: $htvbook_color;
+            letter-spacing: 2px;
+            padding-bottom: 2px;
+            display: inline-block;
+        }
+    }
+}
+
+.display_listDetail_book,
+.sectionReBook {
+    .status {
+        margin-bottom: 15px;
+        margin-left: 35px;
+        min-height: 23px;
+        >span {
+            border-radius: 3px;
+            padding: 1px 10px;
+            white-space: nowrap;
+            line-height: 19px;
+            font-size: $fontSize;
+            display: inline-block;
+            margin-right: 4px;
+            margin-bottom: 4px;
+            min-width: 141px;
+            text-align: center;
+            >span {
+                border-radius: 0;
+                margin-bottom: 0;
+                padding: 0;
+                white-space: normal;
+                width: auto;
+                line-height: 19px;
+                text-orientation: sideways;
+                -webkit-writing-mode: unset;
+                -ms-writing-mode: unset;
+                writing-mode: unset;
+            }
+            &.text-combine {
+                display: contents;
+                font-size: $fontSize;
+                -webkit-text-combine: horizontal;
+                -ms-text-combine-horizontal: all;
+                text-combine-upright: all;
+            }
+            &.cat-discount {
+                border: 2px solid #e60012;
+                background: #e60012;
+                color: #FFF;
+                font-size: 0;
+                >span {
+                    font-size: $fontSize;
+                }
+            }
+            &.cat-series {
+                border: 2px solid #e60012;
+                background: #e60012;
+                color: #FFF;
+            }
+            &.cat-free {
+                border: 2px solid #e60012;
+                color: #e60012;
+            }
+            &.cat-end {
+                border: 2px solid #4bca2e;
+                color: #4bca2e;
+            }
+        }
+    }
+    .btn.point {
+        letter-spacing: normal !important;
+        font-size: 14px;
+        width: 124px;
+        background-color: transparent;
+        border: 0;
+        border-top: 1px solid #ff6600;
+        border-bottom: 1px solid #ff6600;
+        color: #ff6600;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+.wrapper_bookshelf {
+    .display_listDetail_book {
+        .status {
+            margin-left: 0;
+        }
+    }
+}
+
+.display_listLarge_book {
+    .btn.point {
+        width: 125px;
+        background-color: transparent;
+        border: 0;
+        border-top: 1px solid #ff6600;
+        border-bottom: 1px solid #ff6600;
+        color: #ff6600;
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+        padding: 1px 0;
+        margin: auto;
+        position: absolute;
+        bottom: -28px;
+    }
+}

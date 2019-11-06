@@ -1,0 +1,92 @@
+@mixin pager($pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%, $height:30px) {
+    margin: 0 auto $marginB auto;
+    padding: 12px 0 0 0;
+    *zoom: 1;
+    text-align: center;
+    float: $float;
+    width: $width;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    >ul {
+        width:100%;
+        font-size: $fontSize;
+        text-align: center;
+        display: table;
+        >li {
+           display: -moz-inline-box;
+            /* for FF2 */
+            display: table-cell;
+            *display: inline;
+            /* for IE6, IE7 */
+            letter-spacing: normal;
+            vertical-align: middle;
+            *zoom: 1;
+            /* for IE6, IE7 */
+            >a {
+                color: #333333;
+            }
+        }
+        .first {
+            text-align: left;
+            padding: 0;
+            width: 10%;
+            >a {
+                color: #333333;
+            }
+        }
+        .prev {
+            text-align: left;
+            padding: 0;
+            width: 10%;
+
+            >a {
+                color: #333333;
+            }
+        }
+        .num {
+            width:100%;
+            display: table;
+            >span {
+                display: table-cell;
+                width: 16.66%;
+            }
+            >a {
+                display: table-cell;
+                width: 16.66%;
+            }
+            >.currentpage {
+                >span {
+                    display: inline-block;
+                    color: #ffffff;
+                    font-weight: bold;
+                    background: $pageColor;
+                    border-radius: 50%;
+                    width: $height;
+                    height: $height;
+                    line-height: $height; 
+                }
+            }
+            >.disppage {
+                text-decoration: none;
+            }
+        }
+        .next {
+            text-align: right;
+            width: 10%;
+            >a {
+                color: #333333;
+            }
+        }
+        .end {
+            width: 10%;
+            text-align: right;
+            padding: 0;
+            >a {
+                color: #333333;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@mixin listOrderBox($float:right, $marginR:0, $fontSize:14px, $lineHeight:24px) {
+    float: $float;
+    height: $lineHeight;
+    line-height: $lineHeight;
+    margin-right: $marginR;
+    >span {
+        padding: 5px;
+        border-right: #e6e6e6 solid 2px;
+        >a {
+            font-size: $fontSize;
+            text-decoration: none;
+            color: #00a2e5;
+            &:hover {
+                color: #23527c;
+            }
+            &.checked {
+                color: #333333;
+                cursor: default;
+            }
+        }
+    }
+    span:last-child {
+        padding-right: 0;
+        border-right: none;
+    }
+}

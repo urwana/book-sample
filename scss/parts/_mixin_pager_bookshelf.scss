@@ -1,0 +1,93 @@
+@mixin pager_bookshelf($pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%,$height:30px) {
+    margin: 0 auto $marginB auto;
+    *zoom: 1;
+    text-align: center;
+    float: $float;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    >ul {
+        width: $width;
+        margin: auto;
+        font-size: $fontSize;
+        text-align: center;
+        letter-spacing: -.40em;
+        >li {
+            display: -moz-inline-box;
+            /* for FF2 */
+            display: inline-block;
+            *display: inline;
+            /* for IE6, IE7 */
+            letter-spacing: normal;
+            vertical-align: middle;
+            padding: 0px 10px;
+            *zoom: 1;
+            /* for IE6, IE7 */
+            width: 5%;
+            >a {
+                color: #333333;
+            }
+        }
+        .first {
+            padding: 0;
+            >a {
+                color: #333333;
+            }
+        }
+        .prev {
+            padding: 0;
+            >a {
+                color: #333333;
+            }
+        }
+        .num {
+            padding: 0px 2%;
+            width: 65%;
+            >span {
+                display: inline-block;
+                width: 12.666%;
+            }
+            >a {
+                display: inline-block;
+                width: 12.666%;
+            }
+            /*
+            >.currentpage {
+                color:#ffffff ;
+                font-weight: bold;
+                background: $pageColor;
+                border-radius: 50%;
+            }
+            */
+            >.checked {                
+                >span {
+                    display: inline-block;
+                    color: #ffffff;
+                    font-weight: bold;
+                    background: $pageColor;
+                    border-radius: 50%;
+                    width:$height;
+                    height:$height;
+                    line-height: $height; 
+                }
+            }
+            >.disppage {
+                text-decoration: none;
+            }
+        }
+        .next {
+            padding-right: 8px;
+            >a {
+                color: #333333;
+            }
+        }
+        .end {
+            padding: 0;
+            >a {
+                color: #333333;
+            }
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "./parts/_mixin_button";
+@import "./parts/_mixin_listOrderSelectBox";
+@import "./parts/_mixin_listOrderBox_bookshelf";
+@import "./parts/_mixin_numToDisplay";
+@import "./parts/_mixin_pager_bookshelf";
+@import "./parts/_mixin_styleBtnBox";
+@import "./parts/_mixin_rankNav";
+@import "./parts/_mixin_ttlText";
+@import "./parts/_mixin_filterButton_wrap";
+@import "./parts/_mixin_searchBox";
+@import "./parts/_mixin_older_switch_book.scss";
+//SP TOP BOOKSHELF
+.listNav {
+    position: relative;
+}
+
+.listNav_inner0 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .txt_itemCount_book {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        @include txt_itemCount(right, 12px);
+    }
+}
+
+.listNav_inner1 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    .searchBox_book {
+        //($float:left, $marginR:0, $fontSize:14px, $width:400px, $height:40)
+        @include searchBox(100%, none, 0, 12px, 90%, 20, 60);
+        padding: 12px 0;
+        background: #f4f4f4;
+        margin-bottom: 12px;
+    }
+    .numToDisplay_book {
+        //($marginR, $padding, $fontSize, $fontWeight,$linheight)
+        @include numToDisplay(24px, 0, 11px, normal, 25px);
+        margin-bottom: 12px;
+    }
+    .btnBox_conf_book {
+        //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+        @include confBtnBox(right, 0, 11px, normal, 20px, 25px);
+    }
+    .styleBtnBox_book {
+        //($float:right, $marginR:68px, $fontSize:14px, $fontWeight:bold, $iconSize:24px,$lineHeight:24px)
+        @include styleBtnBox(right, 0, 11px, normal, 20px, 25px);
+    }
+}
+
+.listNav_inner2 {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    width:100%;
+    .listInfo {
+        //($pageColor:#37c823, $float:none, $fontSize:93%, $marginB:5px, $width:50%) 
+        @include pager_bookshelf(#666666, none, 14px, 15px, 100%, 14px);
+        >ul>li>a {
+            >img {
+                width: 10px;
+                vertical-align: middle;
+            }
+        }
+    }
+    .orderSelect_book {
+        //($float:right, $width:340px, $height:40px, $marginR:20px, $itemright:20px, $radius:2px, $fontSize:18px) 
+        @include olderSwitchBook(none, 30%, 100px, 24px, 0, 5%, 2px, 11px, 1px);
+        width: 98%;
+        margin: auto;
+        >span>span {
+            text-align: center;
+            padding-left: 0;
+        }
+    }
+}

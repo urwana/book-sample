@@ -1,0 +1,358 @@
+@charset "utf-8";
+@import "./parts/_mixin_button";
+%clearfix {
+    &:after {
+        content: ".";
+        display: block;
+        clear: both;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+/* .sectionReBook
+-------------------------------------------------- */
+
+#page .sectionReBook {
+    margin: 0 auto;
+    &:after {
+        @extend %clearfix;
+    }
+}
+
+.lead_detail_book {
+    height: 32px;
+    overflow: hidden;
+    line-height: 1.4;
+    margin: 0 15px 10px 15px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* Left Side .groupBookCover
+-------------------------------------------------- */
+
+#page .sectionReBook .groupBookCover {
+    float: left; //padding: 5px 2px 5px 5px; // width: 140px;
+    padding: 0;
+    width: 100px;
+    background: #ffffff;
+    text-align: center;
+    #bookCoverImage {
+        width: 100%; //max-width: 200px;
+        //max-height: 200px;
+        margin-bottom: 5px;
+        >img {
+            width: 100%;
+        }
+    }
+    /*
+    #compLabel {
+        margin-bottom: 5px;
+    }
+    #bookCopyTxt {
+        margin: 10px;
+        display: block;
+        color: #d65f00;
+        font-weight: bold;
+        word-break: break-all;
+        padding: 9px;
+        border: 1px solid #e28134;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+    }
+    */
+}
+
+/*groupBookSpec--------------------------------------------------------------------------------------*/
+
+#page .sectionReBook #groupBookSpec {
+    float: left;
+    padding: 0;
+    width: calc(100% - 100px);
+    text-align: left;
+    .bookingDate {
+        margin-bottom: 15px;
+        line-height: 1.2em;
+        color: #cc0000;
+        font-weight: bold;
+    }
+    #newLabel {
+        margin-bottom: 5px;
+    }
+    >h1 {
+        margin-bottom: 8px;
+        font-size: 17px;
+        line-height: 1.4;
+        border: none;
+        padding-bottom: 0;
+    }
+    .releaseDate {
+        color: #e96503;
+        font-size: 11px;
+        margin-bottom: 5px;
+    }
+    .auther_detail_book {
+        font-size: 12px;
+        padding-bottom: 8px;
+        margin-bottom: 5px;
+        border-bottom: dotted 1px #00a2e5;
+        >span {
+            padding-left: 4px;
+            font-size: 14px;
+        }
+    }
+}
+
+/* ------priceAndPoint----------------- */
+
+#page .sectionReBook #groupBookSpec2 {
+    width: calc(100% - 30px);
+    margin: 10px 15px 14px;
+    float: left;
+    .tableWrap_book {
+        .table_priceAndPoint {
+            width: 100%;
+            font-size: 12px;
+            >tbody {
+                >tr {
+                    >th {
+                        padding: 4px 0 4px 0;
+                        font-weight: normal; //width: 33%;
+                        width: 125px;
+                        text-align: left;
+                        .m_point {
+                            font-size: 10px;
+                            font-weight: bold;
+                        }
+                    }
+                    >td {
+                        padding-left: 10px;
+                        margin-bottom: 8px;
+                        font-weight: bold;
+                        &:nth-of-type(1) {
+                            padding-left: 0;
+                            font-weight: normal;
+                        }
+                    }
+                    .price {
+                        font-size: 14px;
+                        font-weight: bold;
+                    }
+                    .pointUp {
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                    .longTitle {
+                        font-size: 11px;
+                    }
+                    .breakThrough {
+                        font-size: 12px !important;
+                        text-decoration: line-through;
+                    }
+                    .term {
+                        font-size: 12px;
+                        font-weight: normal;
+                    }
+                    .highLight {
+                        color: red;
+                    }
+                    .unit {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .bookReputation {
+        display: none;
+    }
+}
+
+%specTitle {
+    margin-bottom: 5px; //font-weight: bold;
+    /*color: #a75b16;*/
+    color: #333333; //font-size: 110%;
+    font-size: 12px;
+    line-height: 1.2;
+}
+
+#page .groupBookSpec_sub {
+    margin: 0 15px 12px 15px;
+    >h2 {
+        @extend %specTitle;
+    }
+    #groupBookAside {
+        clear: both;
+        margin: 0 0 12px 0;
+        padding: 10px 5px 10px 0;
+        border-top: none;
+        border-bottom: dotted 1px #00a2e5;
+        >h2 {
+            @extend %specTitle;
+        }
+        >p {
+            font-size: 12px;
+            line-height: 1.6em;
+        }
+        .readNext_book {
+            color: #00a2e5;
+            cursor: pointer;
+        }
+    }
+    .tableWrap_book {
+        background: #ececec;
+        .table_detailGeneral {
+            width: 100%;
+            font-size: 12px;
+            >tbody {
+                >tr {
+                    >th {
+                        border-right: solid #ffffff 1px;
+                        border-bottom: solid #ffffff 1px;
+                        font-weight: normal;
+                        text-align: left;
+                        padding: 4px;
+                        width: 125px;
+                    }
+                    .breakThrough {
+                        text-decoration: line-through;
+                    }
+                    >td {
+                        border-right: none;
+                        border-bottom: solid #ffffff 1px;
+                        padding: 5px;
+                        >li {
+                            list-style-type: none;
+                            display: inline;
+                            >a {
+                                color: #3e9fe4;
+                                text-decoration: underline;
+                                &:hover {
+                                    color: #23527c;
+                                }
+                            }
+                        }
+                    }
+                    .bread_crumbs {
+                        >li {
+                            &:after {
+                                content: " ＞ ";
+                            }
+                        }
+                        >li:last-child {
+                            &:after {
+                                content: '';
+                            }
+                        }
+                    }
+                    .usualLink {
+                        >a {
+                            color: #333333;
+                            text-decoration: none;
+                            &:hover {
+                                color: #23527c;
+                            }
+                        }
+                    }
+                    .highLight {
+                        color: red;
+                        font-weight: bold;
+                        font-size: 14px;
+                    }
+                    .highLight2 {
+                        color: red;
+                        font-size: 12px;
+                    }
+                    .unit {
+                        font-size: 10px;
+                    }
+                    .device {
+                        >span {
+                            padding-left: 8px;
+                        }
+                    }
+                    &:last-child {
+                        th,
+                        td {
+                            border-bottom: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL DETAIL 
+#page .sectionReBook {
+    .groupBookCover {
+        position: relative;
+    }
+    #groupBookCart {
+        width: calc(100% - 30px);
+        position: absolute;
+        bottom: -28px;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        border: none;
+        text-align: center;
+        .bookCartNav {
+            .bookReadTrialBtnNew {
+                //($listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:4px, $fontSize:14px)
+                @include bookReadTrialBtn(100%, 75px, 25px, 0, 2px, 8px);
+                margin-left: 15px;
+            }
+        }
+        .addMsg,
+        .addFavMsg {
+            display: block;
+            @include L_addCartFavMsg;
+            display: none;
+        }
+    }
+}
+
+#page .sectionReBook #groupBookCart2 {
+    clear: both;
+    width: calc(100% - 30px);
+    margin: auto;
+    position: relative;
+    padding: 0; // width: 45%;
+    background: #ffffff;
+    border: none;
+    text-align: center;
+    .bookCartNav {
+        @extend %clearfix;
+        .bookCartBtn {
+            margin-bottom: 8px; //($listWidth:130px, $aWidth:130px, $height:35px, $padding:4px, $radius:4px, $fontSize:14px)
+            @include bookCartBtn(50%, 95%, 30px, 0, 3px, 12px);
+            float: left;
+            >a {
+                margin: 0;
+            }
+        }
+        .bookWishBtn {
+            margin-bottom: 8px;
+            @include bookWishBtn(50%, 95%, 30px, 0, 3px, 12px);
+            float: left;
+            >a {
+                margin: 0 5% 0 0;
+            }
+        }
+        .addMsg,
+        .addFavMsg {
+            @include T_addCartFavMsg(-35px, none, 10px, bold, 6px 9px 6px 6px, 8px, -16px, 45%);
+            display: none;
+        }
+    }
+}
+/*
+.bookAllBuyBtn {
+    @include bookAllBuyBtn(100%, 97%, 42px, 2px, 12px);
+    margin-bottom: 10px;
+}
+*/

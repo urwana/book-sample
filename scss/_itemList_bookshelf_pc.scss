@@ -1,0 +1,286 @@
+@import "./parts/_mixin_button";
+#mainColumn .listBookArticle {
+    margin-bottom: 24px;
+}
+
+.batch_unread_bookshelf {
+    position: absolute;
+    right: 15%;
+    bottom: -25px;
+    width: 70%;
+    line-height: 20px;
+    height: 20px;
+    border-radius: 3px;
+    background-color: #a4a4a4;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.batch_reserve_bookshelf {
+    position: absolute;
+    right: 15%;
+    bottom: -22px;
+    width: 70%;
+    line-height: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #00a2e5;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.bookThum {
+    margin: 30px 0;
+}
+
+.display_listDetail_book {
+    >.bookThum {
+        >li {
+            position: relative;
+            padding: 20px 0;
+            *zoom: 1;
+            background: url(https://testbook.hikaritv.net/shopping/image/share/img_dot.gif) repeat-x left bottom !important;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .bookThumPhoto {
+                display: block;
+                float: left;
+                width: 220px;
+                margin: 0 0 12px 0;
+                >a {
+                    position: relative;
+                    display: inline-block;
+                    >img {
+                        max-width: 200px;
+                        &:hover {
+                            opacity: 0.8;
+                            filter: alpha(opacity=80);
+                            .bookThumCopy {
+                                display: block;
+                                width: 120px;
+                                color: #d65f00;
+                                font-weight: bold;
+                                word-break: break-all;
+                                margin: 15px 0 10px 0;
+                                padding: 9px;
+                                border: 1px solid #e28134;
+                                -webkit-border-radius: 2px;
+                                -moz-border-radius: 2px;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .bookThumData {
+                display: block;
+                float: left;
+                width: calc(100% - 220px) !important;
+                padding: 12px 0;
+                min-height: 200px;
+                .bookNum_bookshelf {
+                    text-align: right;
+                    font-size: 20px;
+                    margin-right: 8px;
+                }
+                @media screen and (min-width: 1680px) {
+                    width: 63%;
+                }
+                @media screen and (min-width: 1025px) and (max-width: 1128px) {
+                    width: 52%;
+                }
+                @media screen and (max-width: 1024px) {
+                    width: 380px;
+                }
+                .ttl_bookThumComment {
+                    font-size: 14px;
+                }
+                .bookThumComment {
+                    display: block;
+                    font-size: 14px;
+                    word-wrap: break-word;
+                }
+                .releaseDate {
+                    display: block;
+                    color: #ff9900;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                    word-wrap: break-word;
+                }
+                a.name,
+                .name {
+                    display: inline-block;
+                    width: auto;
+                    word-wrap: break-word;
+                    margin: 0 0 20px 0 !important;
+                    color: #333333 !important;
+                    text-decoration: none !important;
+                    &:hover {
+                        color: #23527c !important;
+                    }
+                    >span {
+                        font-size: 24px;
+                    }
+                }
+                .authorSet {
+                    display: block;
+                    color: #333333;
+                    font-size: 18px;
+                    word-wrap: break-word;
+                    padding-bottom: 0 !important;
+                    >a {
+                        color: #333333 !important;
+                        text-decoration: none !important;
+                        line-height: 1.5 !important; // display: inline-block;
+                        display: block;
+                        margin-bottom: 10px;
+                        &:hover {
+                            color: #23527c;
+                        }
+                        &:first-child {
+                            margin-bottom: 15px;
+                        }
+                    }
+                    .genre {
+                        font-size: 18px;
+                        word-wrap: break-word;
+                        padding-bottom: 0 !important;
+                        color: #333333 !important;
+                        line-height: 1.5;
+                        display: block;
+                        margin-bottom: 10px;
+                        >a {
+                            color: #333333 !important;
+                            &:hover {
+                                color: #23527c !important;
+                            }
+                        }
+                        >span {
+                            color: #333333 !important;
+                        }
+                    }
+                }
+                .linkToSeries {
+                    margin-bottom: 10px;
+                    background: url(/test/pre_bookrenewal/img/arrow_linkto_pc_book.png) left center no-repeat;
+                    background-size: 12px;
+                    padding-left: 18px;
+                    >a {
+                        font-size: 18px;
+                        line-height: 1.5;
+                        color: #333333 !important;
+                        &:hover {
+                            color: #23527c !important;
+                        }
+                    }
+                }
+            }
+            .bookThumTool {
+                display: none;
+            }
+        }
+    }
+}
+
+.display_listLarge_book {
+    >.bookThum {
+        margin-right: -50px;
+        >li {
+            padding: 10px 0 0 0;
+            background: none;
+            *zoom: 1;
+            display: inline-block;
+            position: relative;
+            margin-right: 30px;
+            margin-bottom: 40px;
+            &:after {
+                content: '';
+                display: block;
+                clear: both;
+            }
+            .bookThumPhoto {
+                display: block;
+                float: none !important;
+                width: 140px !important;
+                margin: 0 auto 10px auto;
+                >a>img {
+                    width: 100%; //width: 140px;
+                    &:hover img {
+                        opacity: 0.8;
+                        filter: alpha(opacity=80);
+                        .bookThumCopy {
+                            display: block;
+                            width: 120px;
+                            color: #d65f00;
+                            font-weight: bold;
+                            word-break: break-all;
+                            margin: 15px 0 10px 0;
+                            padding: 9px;
+                            border: 1px solid #e28134;
+                            -webkit-border-radius: 2px;
+                            -moz-border-radius: 2px;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+                .batch_unread_bookshelf {
+                    position: absolute;
+                    right: 10%;
+                    ;
+                    bottom: -16px;
+                    height: 20px;
+                    font-size: 14px;
+                    border-radius: 3px;
+                    width: 80%;
+                    line-height: 20px;
+                }
+            }
+            .bookThumData {
+                .ttl_bookThumComment{
+                    display: none;
+                }
+                .bookThumComment {
+                    display: none;
+                }
+                .bookNum_bookshelf {
+                    display: none;
+                }
+                .releaseDate {
+                    display: none;
+                }
+                a.name,
+                .name {
+                    display: none;
+                }
+                .authorSet {
+                    display: none;
+                }
+                .linkToSeries {
+                    display: none;
+                }
+            }
+            .bookThumTool {
+                display: none;
+            }
+        }
+    }
+}
+
+.bookListArea .bookListAreaInr .nav-horizontal li a {
+    color: #333333;
+    text-decoration: none;
+    &:hover {
+        color: #23527c;
+    }
+}

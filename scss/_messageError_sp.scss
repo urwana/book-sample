@@ -1,0 +1,31 @@
+ .messageArea {
+     font-size: 12px;
+     font-weight: normal;
+     margin:8px auto;
+     >ul {
+         font-size: 11px;
+         font-weight: bold;
+         padding: 10px;
+         -webkit-border-radius: 2px;
+         border-radius: 2px;
+         padding: 8px;
+         width: 60%;
+         margin: auto;
+     }
+ }
+
+ .messageError {
+     >ul {
+         color: #d21d1d;
+         background-color: #ffffff;
+         border: 1px solid #ec827d;
+     }
+ }
+
+ .messageSuccess {
+     >ul {
+         color: #0053a8;
+         background-color: #caebfd;
+         border: 1px solid #a5ceea;
+     }
+ }

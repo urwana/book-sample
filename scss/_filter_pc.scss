@@ -1,0 +1,120 @@
+@import "./parts/_mixin_button";
+%labelSpanInput {
+    display: block;
+    width: 100%;
+    font-size: 12px;
+    letter-spacing: normal !important;
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    label {
+        float: left;
+        display: block;
+        vertical-align: middle;
+        margin-left: 4px;
+        .filterNum_book {
+            font-size: 10px;
+            font-weight: bold;
+            padding-left: 4px;
+        }
+        >span {
+            display: inline-block;
+            &:nth-of-type(2) {
+                margin-left: 4px;
+            }
+        }
+    }
+    input {
+        display: block;
+        float: right;
+        width: 12px;
+        height: 12px;
+        border: solid 1px #666666;
+        background: #ffffff;
+        background-size: 12px; //-webkit-appearance: none;
+    }
+}
+
+.nav_filterBox_book {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    font-size: 11px;
+    .nav_filter_book {
+        .hierarchy_1 {
+            &:before {
+                content: '' !important;
+            }
+            @extend %labelSpanInput;
+            margin-bottom: 16px;
+            border-left: 3px solid #abff99;
+            padding-left: 0 !important;
+            >p {
+                font-size: 14px;
+                margin-bottom: 6px;
+                .js_subMenuOpener {
+                    display: none;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    clear: both;
+                }
+            }
+            .hierarchy_2 {
+                margin-bottom: 12px;
+                >li {
+                    @extend %labelSpanInput;
+                    padding-left: 6px !important;
+                    >.js_checkOrController {
+                        display: block;
+                        float: right;
+                        width: 12px;
+                        height: 12px;
+                        border: solid 1px #666666;
+                        background: #ffffff;
+                        background-size: 12px;
+                    }
+                    &:before {
+                        content: "-" !important;
+                        position: absolute;
+                        left: 2px !important;
+                    }
+                    &:after {
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    >label {
+                        font-size: 12px;
+                        width: 115px;
+                        height: 20px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        position: relative;
+                    }
+                }
+                >p {
+                    margin-bottom: 4px;
+                }
+            }
+        }
+    }
+}
+
+.nav_filterBox_book>.filter_buttonBox_book {
+    width: 98%;
+    margin: 8px auto;
+    .filterMoreButton {
+        //($width, $height, $radius, $padding, $arrowsL, $device, $fontSize)
+        @include filterMoreButton(160px, 50px, 10px, 0, 0, 'pc', 14px);
+        margin-bottom: 8px;
+    }
+    .filterResetButton {
+        //($width, $height, $radius, $padding, $arrowsL, $device, $fontSize)
+        @include filterResetButton(160px, 50px, 10px, 0, 0, 'pc', 14px);
+    }
+}
