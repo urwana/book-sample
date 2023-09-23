@@ -15,12 +15,12 @@ rankingNavigation.prototype = {
       displayNumber: 5,
       navTtl: [
         "総合(全ジャンル)",
+        "映画",
+        "マンガ",
+        "音楽",
         "本",
-        "電子書籍",
-        "雑誌",
-        "洋書",
-        "DVD・ブルーレイ",
-        "CD",
+        "バイク",
+        "車",
         "ゲーム",
         "PCソフト・周辺機器",
       ],
@@ -218,7 +218,6 @@ rankingNavigation.prototype = {
     });
   },
   setHtml: function(data, navIndex, fgenre) {
-    console.log(data["data"]);
     for (var i = 0; i < data["data"].length; i++) {
       if (i < 3) {
         var bookImg = $("<img>")
