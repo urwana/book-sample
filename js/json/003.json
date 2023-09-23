@@ -1,167 +1,97 @@
 {
-  "hits": 5,
-  "period": "0",
   "data": [
       {
-          "subtitle_3": "",
-          "stock_status": null,
-          "subtitle_1": "",
-          "author": [],
-          "item_type": "01",
-          "image_url": "https://tshop.r10s.jp/book/cabinet/6974/9784802156974_1_2.jpg",
-          "subtitle_2": "",
-          "goods_no": "17643575",
-          "rating": {
-              "count": "0",
-              "point": "0.0"
-          },
-          "prerank": "1",
+          "author": [
+              "SixTONES"
+          ],
+          "imageUrl": "https://tshop.r10s.jp/book/cabinet/9210/2100013529210.gif",
+          "itemNo": "17639899",
           "description": "",
-          "title": "003【予約】GIANNA（ジェンナ） ＃10 SPECIAL EDITION（表紙：八木勇征版）",
-          "url": "https://books.rakuten.co.jp/rb/17643575/",
-          "isbn_jan": "9784802156974",
-          "release_date": {
-              "other": "",
-              "month": "10",
+          "title": "003【予約】慣声の法則 in DOME (初回盤＋通常盤 Blu-rayセット)【Blu-ray】",
+          "link": "https://books.rakuten.co.jp/rb/17639899/",
+          "janCode": "2100013529210",
+          "released": {
+              "month": "11",
               "year": "2023",
-              "day": "30"
+              "day": "01"
           },
-          "price": "1650",
+          "price": "12600",
           "rank": "1",
-          "publisher": "ナンバーセブン",
-          "id": "1"
+          "publisher": "(株)ソニー・ミュージックレーベルズ／(株)ソニー・ミュージックソリューションズ"
       },
       {
-          "subtitle_3": "",
-          "stock_status": null,
-          "subtitle_1": "",
           "author": [
-              "柴田　ケイコ"
+              "SixTONES"
           ],
-          "item_type": "01",
-          "image_url": "https://tshop.r10s.jp/book/cabinet/0420/9784041140420.jpg",
-          "subtitle_2": "",
-          "goods_no": "17564620",
-          "rating": {
-              "count": "0",
-              "point": "0.0"
-          },
-          "prerank": "2",
+          "imageUrl": "https://tshop.r10s.jp/book/cabinet/5798/4547366645798_1_2.jpg",
+          "itemNo": "17639896",
           "description": "",
-          "title": "パンどろぼうとほっかほっカー",
-          "url": "https://books.rakuten.co.jp/rb/17564620/",
-          "isbn_jan": "9784041140420",
-          "release_date": {
-              "other": "",
-              "month": "09",
+          "title": "【予約】慣声の法則 in DOME (Blu-ray初回盤)【Blu-ray】",
+          "link": "https://books.rakuten.co.jp/rb/17639896/",
+          "janCode": "4547366645798",
+          "released": {
+              "month": "11",
               "year": "2023",
-              "day": "13"
+              "day": "01"
           },
-          "price": "1430",
+          "price": "7040",
           "rank": "2",
-          "publisher": "KADOKAWA",
-          "id": "2"
+          "publisher": "(株)ソニー・ミュージックレーベルズ／(株)ソニー・ミュージックソリューションズ"
       },
       {
-          "subtitle_3": "",
-          "stock_status": null,
-          "subtitle_1": "",
           "author": [],
-          "item_type": "01",
-          "image_url": "https://tshop.r10s.jp/book/cabinet/1474/9784087901474_1_2.jpg",
-          "subtitle_2": "",
-          "goods_no": "17638820",
-          "rating": {
-              "count": "0",
-              "point": "0.0"
-          },
-          "prerank": "3",
+          "imageUrl": "https://tshop.r10s.jp/book/cabinet/6974/9784802156974_1_2.jpg",
+          "itemNo": "17643575",
           "description": "",
-          "title": "【予約】山田涼介30thプレミアムBOX（仮）【初回限定版】",
-          "url": "https://books.rakuten.co.jp/rb/17638820/",
-          "isbn_jan": "9784087901474",
-          "release_date": {
-              "other": "",
-              "month": "01",
-              "year": "2024",
-              "day": "30"
-          },
-          "price": "7700",
-          "rank": "3",
-          "publisher": "集英社",
-          "id": "3"
-      },
-      {
-          "subtitle_3": "",
-          "stock_status": null,
-          "subtitle_1": "",
-          "author": [
-              "のんすけ"
-          ],
-          "item_type": "01",
-          "image_url": "https://tshop.r10s.jp/book/cabinet/5551/9784046065551_1_4.jpg",
-          "subtitle_2": "",
-          "goods_no": "17623306",
-          "rating": {
-              "count": "0",
-              "point": "0.0"
-          },
-          "prerank": "4",
-          "description": "",
-          "title": "【予約】【楽天ブックス限定特典】家族でおいしい、身体うれしい！ おきらく麹ごはん(書籍未公開レシピ（PDFデータ）)",
-          "url": "https://books.rakuten.co.jp/rb/17623306/",
-          "isbn_jan": "9784046065551",
-          "release_date": {
-              "other": "",
-              "month": "10",
-              "year": "2023",
-              "day": "26"
-          },
-          "price": "1760",
-          "rank": "4",
-          "publisher": "KADOKAWA",
-          "id": "4"
-      },
-      {
-          "subtitle_3": "",
-          "stock_status": null,
-          "subtitle_1": "",
-          "author": [],
-          "item_type": "01",
-          "image_url": "https://tshop.r10s.jp/book/cabinet/6981/9784802156981_1_2.jpg",
-          "subtitle_2": "",
-          "goods_no": "17643576",
-          "rating": {
-              "count": "0",
-              "point": "0.0"
-          },
-          "prerank": "5",
-          "description": "",
-          "title": "【予約】GIANNA（ジェンナ） ＃10 SPECIAL EDITION（表紙：礼真琴版）",
-          "url": "https://books.rakuten.co.jp/rb/17643576/",
-          "isbn_jan": "9784802156981",
-          "release_date": {
-              "other": "",
+          "title": "【予約】GIANNA（ジェンナ） ＃10 SPECIAL EDITION（表紙：八木勇征版）",
+          "link": "https://books.rakuten.co.jp/rb/17643575/",
+          "janCode": "9784802156974",
+          "released": {
               "month": "10",
               "year": "2023",
               "day": "30"
           },
           "price": "1650",
-          "rank": "5",
-          "publisher": "ナンバーセブン",
-          "id": "5"
-      }
-  ],
-  "kind": "hourly",
-  "count": "120",
-  "page": "1",
-  "genre_name": "本",
-  "genre_id": "001",
-  "page_count": "24",
-  "period_list": [
+          "rank": "3",
+          "publisher": "ナンバーセブン"
+      },
       {
-          "start": "2023-09-20 21:00:00",
-          "end": "2023-09-20 21:59:59"
+          "author": [
+              "SixTONES"
+          ],
+          "imageUrl": "https://tshop.r10s.jp/book/cabinet/9203/2100013529203.gif",
+          "itemNo": "17639898",
+          "description": "",
+          "title": "【予約】慣声の法則 in DOME (初回盤＋通常盤 DVDセット)",
+          "link": "https://books.rakuten.co.jp/rb/17639898/",
+          "janCode": "2100013529203",
+          "released": {
+              "month": "11",
+              "year": "2023",
+              "day": "01"
+          },
+          "price": "12600",
+          "rank": "4",
+          "publisher": "(株)ソニー・ミュージックレーベルズ／(株)ソニー・ミュージックソリューションズ"
+      },
+      {
+          "author": [
+              "SixTONES"
+          ],
+          "imageUrl": "https://tshop.r10s.jp/book/cabinet/5774/4547366645774_1_2.jpg",
+          "itemNo": "17639894",
+          "description": "",
+          "title": "【予約】慣声の法則 in DOME (DVD初回盤)",
+          "link": "https://books.rakuten.co.jp/rb/17639894/",
+          "janCode": "4547366645774",
+          "released": {
+              "month": "11",
+              "year": "2023",
+              "day": "01"
+          },
+          "price": "7040",
+          "rank": "5",
+          "publisher": "(株)ソニー・ミュージックレーベルズ／(株)ソニー・ミュージックソリューションズ"
       }
   ]
 }

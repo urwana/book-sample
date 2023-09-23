@@ -11,86 +11,97 @@ rankingNavigation.prototype = {
   genreData: {
     all: {
       genreNo: ["000", "001", "101", "007", "005", "003", "002", "006", "004"],
-      term: "hourly",
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
+      naviTitle: [
         "総合(全ジャンル)",
         "映画",
         "マンガ",
         "音楽",
         "本",
         "バイク",
-        "車",
         "ゲーム",
         "PCソフト・周辺機器",
       ],
     },
-    book: {
-      genreNo: ["001", "001001", "001019", "001004", "001003", "001010"],
-      term: "hourly",
+    movie: {
+      genreNo: ["001", "0011", "0012", "0013", "0014", "0015"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
-        "総合（本）",
-        "漫画（コミック）",
-        "文庫",
-        "小説・エッセイ",
-        "絵本・児童書・図鑑",
-        "美容・暮らし・健康・料理",
+      naviTitle: [
+        "総合（映画）",
+        "SFX",
+        "アクション",
+        "サスペンス",
+        "ドラマ",
+        "ホラー",
+        "ドキュメンタリー",
+        "歴史",
+        "音楽",
       ],
     },
-    magazine: {
-      genreNo: ["007", "007606", "007608", "007626", "007616"],
-      term: "hourly",
+    comic: {
+      genreNo: ["007", "0071", "0072", "0073", "0074"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
-        "総合（雑誌）",
-        "女性誌",
-        "生活・健康",
-        "付録付き雑誌",
-        "幼児・児童・絵本",
+      naviTitle: [
+        "総合（マンガ）",
+        "少年マンガ",
+        "少女マンガ",
+        "アダルト",
+        "BL",
       ],
     },
-    fbook: {
-      genreNo: ["005", "005407", "005401", "005404", "005402"],
-      term: "hourly",
+    music: {
+      genreNo: ["005", "0051", "0052", "0053", "0054"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
+      naviTitle: [
         "総合（洋書）",
-        "Books for kids（児童書）",
-        "Art & Entertainment（芸術＆エンターテインメント）",
-        "Family life & Comics（生活＆コミック）",
-        "Fiction & Literature（小説＆文芸）",
+        "J-Pop",
+        "韓流",
+        "洋楽",
+        "EDM",
+        "Hip Hop",
+        "R&B",
+        "Dance",
+        "アイドル",
+        "歌謡曲・演歌",
       ],
     },
-    dvd: {
-      genreNo: ["003", "003207", "003201", "003202", "003206"],
-      term: "hourly",
+    book: {
+      genreNo: ["003", "0031", "0032", "0033", "0034"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
-        "総合（DVD・ブルーレイ）",
-        "ミュージック・ライブ映像",
-        "洋画",
-        "邦画",
-        "アニメ",
+      naviTitle: [
+        "総合（本）",
+        "小説",
+        "ジャーナリズム",
+        "エッセイ",
+        "絵本",
+        "ビジネス",
+        "自己啓発",
+        "マネー",
       ],
     },
-    cd: {
-      genreNo: ["002", "002101", "002102", "002108", "002114"],
-      term: "hourly",
+    motorcycle: {
+      genreNo: ["002", "0021", "0022", "0023", "0024"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
-        "総合（CD）",
-        "J-POP",
-        "ロック・ポップス",
-        "アニメ",
-        "キッズ・ファミリー",
+      naviTitle: [
+        "総合（バイク）",
+        "中型ロード",
+        "小型ロード",
+        "大型ロード",
+        "スクーター",
+        "オフロード",
       ],
     },
     game: {
-      genreNo: ["006", "006514", "006508", "006513", "006510"],
-      term: "hourly",
+      genreNo: ["006", "0061", "0062", "0063", "0064"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
+      naviTitle: [
         "総合（ゲーム）",
         "Nintendo Switch",
         "ニンテンドー3DS",
@@ -98,16 +109,16 @@ rankingNavigation.prototype = {
         "おもちゃ",
       ],
     },
-    software: {
-      genreNo: ["004", "004321", "004319", "004320", "004322"],
-      term: "hourly",
+    PC: {
+      genreNo: ["004", "0041", "0042", "0043", "0044"],
+      period: "daily",
       displayNumber: 5,
-      navTtl: [
-        "総合（PCソフト・周辺機器）",
+      naviTitle: [
+        "総合（PC・周辺機器）",
         "タブレット・ノート",
-        "PCソフト",
-        "Kobo（電子書籍）",
-        "マウス・キーボード",
+        "PC",
+        "ソフト",
+        "周辺機器",
       ],
     },
   },
@@ -116,25 +127,25 @@ rankingNavigation.prototype = {
   rankStock: {
     action: "stockArray",
     genre: null,
-    term: "hourly",
+    period: "daily",
     number: 5,
   },
-  urlJudge: function() {
+  UrlDiscrimination: function() {
     var uri = window.location.href;
-    if (uri.match("/book/")) {
+    if (uri.match("/movie/")) {
+      thisClass.pageGenre = "movie";
+    } else if (uri.match("/comic/")) {
+      thisClass.pageGenre = "comic";
+    } else if (uri.match("/music/")) {
+      thisClass.pageGenre = "music";
+    } else if (uri.match("/book/")) {
       thisClass.pageGenre = "book";
-    } else if (uri.match("/magazine/")) {
-      thisClass.pageGenre = "magazine";
-    } else if (uri.match("/foreign-book/")) {
-      thisClass.pageGenre = "fbook";
-    } else if (uri.match("/dvd-blu-ray/")) {
-      thisClass.pageGenre = "dvd";
+    } else if (uri.match("/motorcycle/")) {
+      thisClass.pageGenre = "motorcycle";
     } else if (uri.match("/game/")) {
       thisClass.pageGenre = "game";
-    } else if (uri.match("/cd/")) {
-      thisClass.pageGenre = "cd";
-    } else if (uri.match("/software/")) {
-      thisClass.pageGenre = "software";
+    } else if (uri.match("/pc/")) {
+      thisClass.pageGenre = "pc";
     } else {
       thisClass.pageGenre = "all";
     }
@@ -144,32 +155,32 @@ rankingNavigation.prototype = {
     var ul_navRank = $("<ul>").addClass("navRank");
     for (
       var i = 0;
-      i < thisClass.genreData[thisClass.pageGenre]["navTtl"].length;
+      i < thisClass.genreData[thisClass.pageGenre]["naviTitle"].length;
       i++
     ) {
       var li_js_Rank = $("<li>")
         .addClass("js_rank")
-        .addClass("js_" + thisClass.genreData[thisClass.pageGenre]["navTtl"][i])
-        .text(thisClass.genreData[thisClass.pageGenre]["navTtl"][i]);
+        .addClass(
+          "js_" + thisClass.genreData[thisClass.pageGenre]["naviTitle"][i]
+        )
+        .text(thisClass.genreData[thisClass.pageGenre]["naviTitle"][i]);
       ul_navRank.append(li_js_Rank);
     }
     $(".rankTabArea").append(ul_navRank);
     thisClass.switchingNavAndPage(0);
   },
-  callApi: function(genreNo, navIndex, term, number) {
+  callApi: function(genreNo, navIndex, period, number) {
     $(".rankContents").empty();
     $(".rankSpinner").css({
       display: "block",
     });
     var URI = "/js/json/" + genreNo + ".json";
-    console.log(URI);
     $.ajax({
       url: URI,
       type: "GET",
       dataType: "json",
       timeout: 10000,
       success: function(data) {
-        console.log(data);
         thisClass.setHtml(data, navIndex, genreNo);
       },
       error: function(xhr, textStatus, errorThrown) {
@@ -181,13 +192,12 @@ rankingNavigation.prototype = {
       },
       complete: function(data) {},
     });
-    // thisClass.setHtml(hourlyJson, navIndex, genreNo);
   },
-  priceFormat: function(string) {
+  formatPrice: function(string) {
     var fstring = string.replace(/(\d)(?=(\d{3})+$)/g, "$1,");
     return fstring;
   },
-  leaderThree: function() {
+  ellipsis: function() {
     $(".rankData__ttl").css({
       overflow: "hidden",
       height: "2.6rem",
@@ -221,7 +231,7 @@ rankingNavigation.prototype = {
     for (var i = 0; i < data["data"].length; i++) {
       if (i < 3) {
         var bookImg = $("<img>")
-          .attr("src", data["data"][i]["image_url"] + "?fitin=200:200")
+          .attr("src", data["data"][i]["imageUrl"] + "?fitin=200:200")
           .attr("alt", data["data"][i]["title"]);
         var rankImg__mark = $("<span>")
           .addClass("rankImg__mark")
@@ -239,7 +249,7 @@ rankingNavigation.prototype = {
           .append(bookImg);
         var rankData__price = $("<dd>")
           .addClass("rankData__price")
-          .text(thisClass.priceFormat(data["data"][i]["price"]) + "円(税込)");
+          .text(thisClass.formatPrice(data["data"][i]["price"]) + "円(税込)");
         var rankData__auther = $("<dd>")
           .addClass("rankData__auther")
           .text(data["data"][i]["author"]);
@@ -263,30 +273,11 @@ rankingNavigation.prototype = {
           .append(rankDataWrap);
         var rank_link = $("<div>")
           .addClass("js_rankLinkBox")
-          .data("link", data["data"][i]["url"])
+          .data("link", data["data"][i]["link"])
           .css({
             cursor: "pointer",
           })
           .append(rankItem);
-        if (navIndex == 0) {
-          rank_link.attr({
-            onclick:
-              "s.lidTrack('ipn-ranking-" +
-              thisClass.pageGenre +
-              "-0" +
-              data["data"][i]["rank"] +
-              "')",
-          });
-        } else {
-          rank_link.attr({
-            onclick:
-              "s.lidTrack('ipn-ranking-" +
-              fgenre +
-              "-0" +
-              data["data"][i]["rank"] +
-              "')",
-          });
-        }
       } else {
         var rankImg__mark = $("<span>")
           .addClass("rankImg__mark")
@@ -302,7 +293,7 @@ rankingNavigation.prototype = {
           '<span class="innerAuther">' +
             data["data"][i]["author"] +
             '</span><span class="innerPrice">' +
-            thisClass.priceFormat(data["data"][i]["price"]) +
+            thisClass.formatPrice(data["data"][i]["price"]) +
             "円(税込)</span>"
         );
         var rankData__ttl = $("<dt>")
@@ -325,38 +316,17 @@ rankingNavigation.prototype = {
           .append(rankDataWrap);
         var rank_link = $("<div>")
           .addClass("js_rankLinkBox")
-          .data("link", data["data"][i]["url"])
+          .data("link", data["data"][i]["link"])
           .css({
             cursor: "pointer",
           })
           .append(rankItem);
-        if (navIndex == 0) {
-          rank_link.attr({
-            onclick:
-              "s.lidTrack('ipn-ranking-" +
-              thisClass.pageGenre +
-              "-0" +
-              data["data"][i]["rank"] +
-              "')",
-          });
-        } else {
-          rank_link.attr({
-            onclick:
-              "s.lidTrack('ipn-ranking-" +
-              fgenre +
-              "-0" +
-              data["data"][i]["rank"] +
-              "')",
-          });
-        }
       }
       $(".rankContents").append(rank_link);
     }
     if (navIndex == 0) {
       $(".js_rankLinkBtn").attr({
-        onclick:
-          "s.lidTrack('ipn-ranking-" + thisClass.pageGenre + "-all-more')",
-        href: "//suzuki/ranking/hourly/" + fgenre + "/#!/1",
+        href: "//suzuki/" + fgenre + "s",
       });
       $(document).ready(function() {
         thisClass.applyCss();
@@ -364,13 +334,11 @@ rankingNavigation.prototype = {
     } else {
       if (thisClass.pageGenre == "fbook") {
         $(".js_rankLinkBtn").attr({
-          onclick: "s.lidTrack('ipn-ranking-" + fgenre + "-all-more')",
-          href: "//suzuki/search/dt/g" + fgenre + "/",
+          href: "//suzuki/" + fgenre + "/t",
         });
       } else {
         $(".js_rankLinkBtn").attr({
-          onclick: "s.lidTrack('ipn-ranking-" + fgenre + "-all-more')",
-          href: "//suzuki/ranking/hourly/" + fgenre + "/#!/1",
+          href: "//suzuki/" + fgenre + "/u",
         });
       }
       $(document).ready(function() {
@@ -412,7 +380,7 @@ rankingNavigation.prototype = {
       });
       thisClass.rankContentsHeightFlag = true;
     }
-    thisClass.leaderThree();
+    thisClass.ellipsis();
     thisClass.attachEvents();
   },
   setNavWidthPositionArray: function(navIndex) {
@@ -456,7 +424,7 @@ rankingNavigation.prototype = {
       });
     } else if (
       navIndex ==
-      thisClass.genreData[thisClass.pageGenre]["navTtl"].length - 1
+      thisClass.genreData[thisClass.pageGenre]["naviTitle"].length - 1
     ) {
       $(".rankLeftNavArrow").css({
         display: "table",
@@ -500,14 +468,15 @@ rankingNavigation.prototype = {
       fcount++;
       if (
         fcount >
-        thisClass.genreData[thisClass.pageGenre]["navTtl"].length - 1
+        thisClass.genreData[thisClass.pageGenre]["naviTitle"].length - 1
       ) {
         fcount = 0;
       }
     } else {
       fcount--;
       if (fcount < 0) {
-        fcount = thisClass.genreData[thisClass.pageGenre]["navTtl"].length - 1;
+        fcount =
+          thisClass.genreData[thisClass.pageGenre]["naviTitle"].length - 1;
       }
     }
     return fcount;
@@ -539,7 +508,7 @@ rankingNavigation.prototype = {
       thisClass.callApi(
         thisClass.genreData[thisClass.pageGenre]["genreNo"][navIndex],
         navIndex,
-        thisClass.genreData[thisClass.pageGenre]["term"],
+        thisClass.genreData[thisClass.pageGenre]["period"],
         thisClass.genreData[thisClass.pageGenre]["displayNumber"]
       );
       thisClass.removeEvents();
@@ -580,14 +549,13 @@ rankingNavigation.prototype = {
   //ACTION____________________________________________________________________
   initial: function() {
     var nowPage = thisClass.rankStock["genre"];
-
     if (
       nowPage == null ||
       nowPage == undefined ||
       nowPage == "undefined" ||
       nowPage == ""
     ) {
-      thisClass.urlJudge();
+      thisClass.UrlDiscrimination();
     } else {
       thisClass.switchingNavAndPage(nowPage);
     }
