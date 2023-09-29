@@ -16,7 +16,7 @@ rankingNavigation.prototype = {
       naviTitle: [
         "総合(全ジャンル)",
         "映画",
-        "マンガ",
+        "アニメ",
         "音楽",
         "本",
         "バイク",
