@@ -20,10 +20,6 @@
 .navRank {
   position: relative;
   display: block;
-  // display: flex;
-  // justify-content: space-between;
-  // flex-wrap: nowrap;
-  // align-items: center;
   height: 32px;
   list-style-type: none;
   overflow-x: scroll;
@@ -85,11 +81,9 @@
 }
 
 .rankImg {
-  // float: left;
   position: relative;
   text-align: center;
   vertical-align: bottom;
-  // width: 78px;
   width: 118px;
   height: 4.89375rem;
   padding: 0 8px 0 26px;
@@ -102,7 +96,6 @@
 }
 
 .rankImg2 {
-  // float: left;
   position: relative;
   margin-right: 4.6875%;
   text-align: center;
@@ -112,7 +105,6 @@
 }
 
 .rankDataWrap {
-  // float: left;
   width: 87.34375%;
 }
 
